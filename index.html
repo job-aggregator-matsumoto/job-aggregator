@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハローワーク求人まとめ | 理想の仕事を見つける</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="ハローワークの最新求人情報を一括検索・閲覧できるまとめサイトです。モダンなインターフェースで快適な仕事探しをサポートします。">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">eight株式会社の求人検索サービス</h1>
+            <p class="subtitle">ハローワーク インターネットサービスの求人情報をスマートに閲覧</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-bar">
+                <input type="text" id="keyword" placeholder="キーワード（職種、会社名など）">
+                <select id="location">
+                    <option value="">全ての勤務地</option>
+                    <option value="東京都">東京都</option>
+                    <option value="神奈川県">神奈川県</option>
+                    <option value="大阪府">大阪府</option>
+                    <option value="在宅">在宅・リモート</option>
+                </select>
+                <select id="category">
+                    <option value="">全ての雇用枠</option>
+                    <option value="一般">一般雇用</option>
+                    <option value="障害者枠">障害者枠</option>
+                </select>
+                <select id="period">
+                    <option value="all">全ての期間</option>
+                    <option value="1">今日</option>
+                    <option value="3">3日以内</option>
+                    <option value="7" selected>今週（1週間以内）</option>
+                </select>
+                <button class="btn-search" onclick="filterJobs()">
+                    <i class="fas fa-search"></i> 検索
+                </button>
+            </div>
+        </section>
+
+        <div id="job-grid" class="job-grid">
+            <!-- JavaScriptで動的に生成 -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container"
+            style="text-align: center; padding: 40px 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.8rem;">
+            <p>&copy; 2026 HelloWork Hub. All rights reserved.</p>
+            <p>※本サイトは学習目的のデモサイトであり、実際のハローワーク公式サービスとは関係ありません。</p>
+        </div>
+    </footer>
+
+    <!-- 詳細モーダル -->
+    <div id="job-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+                <!-- JavaScriptで動的に生成 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="data/jobs_data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
