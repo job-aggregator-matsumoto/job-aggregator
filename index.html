@@ -15,19 +15,95 @@
         <div class="container">
             <h1 class="logo">eight株式会社の求人検索サービス</h1>
             <p class="subtitle">ハローワーク インターネットサービスの求人情報をスマートに閲覧</p>
+            <div id="sync-status" style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px;">
+                AI自動更新: <span id="last-updated-time">確認中...</span>
+            </div>
         </div>
     </header>
 
     <main class="container">
+        <!-- サービスのお知らせ注意書き（インライン編集可能） -->
+        <div id="service-notice-box" class="service-notice-box" onclick="editServiceNotice()" title="クリックして注意書きを編集">
+            <div class="service-notice-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="service-notice-content">
+                <p id="service-notice-text">※障害者雇用求人は、勤務地は近畿だけを載せています。また、在宅可能と、通勤の両方の求人を載せています。※一般求人の方では、全国にある在宅勤務可能な求人だけを載せています。通勤が必要な求人は一般求人では、載せていません。</p>
+            </div>
+            <div class="service-notice-edit-indicator">
+                <i class="fas fa-pen"></i> 修正
+            </div>
+        </div>
+
         <section class="search-section">
             <div class="search-bar">
                 <input type="text" id="keyword" placeholder="キーワード（職種、会社名など）">
                 <select id="location">
                     <option value="">全ての勤務地</option>
-                    <option value="東京都">東京都</option>
-                    <option value="神奈川県">神奈川県</option>
-                    <option value="大阪府">大阪府</option>
                     <option value="在宅">在宅・リモート</option>
+                    <optgroup label="北海道・東北">
+                        <option value="北海道">北海道</option>
+                        <option value="青森県">青森県</option>
+                        <option value="岩手県">岩手県</option>
+                        <option value="宮城県">宮城県</option>
+                        <option value="秋田県">秋田県</option>
+                        <option value="山形県">山形県</option>
+                        <option value="福島県">福島県</option>
+                    </optgroup>
+                    <optgroup label="関東">
+                        <option value="茨城県">茨城県</option>
+                        <option value="栃木県">栃木県</option>
+                        <option value="群馬県">群馬県</option>
+                        <option value="埼玉県">埼玉県</option>
+                        <option value="千葉県">千葉県</option>
+                        <option value="東京都">東京都</option>
+                        <option value="神奈川県">神奈川県</option>
+                    </optgroup>
+                    <optgroup label="甲信越・北陸">
+                        <option value="新潟県">新潟県</option>
+                        <option value="富山県">富山県</option>
+                        <option value="石川県">石川県</option>
+                        <option value="福井県">福井県</option>
+                        <option value="山梨県">山梨県</option>
+                        <option value="長野県">長野県</option>
+                    </optgroup>
+                    <optgroup label="東海">
+                        <option value="岐阜県">岐阜県</option>
+                        <option value="静岡県">静岡県</option>
+                        <option value="愛知県">愛知県</option>
+                        <option value="三重県">三重県</option>
+                    </optgroup>
+                    <optgroup label="近畿">
+                        <option value="滋賀県">滋賀県</option>
+                        <option value="京都府">京都府</option>
+                        <option value="大阪府">大阪府</option>
+                        <option value="兵庫県">兵庫県</option>
+                        <option value="奈良県">奈良県</option>
+                        <option value="和歌山県">和歌山県</option>
+                    </optgroup>
+                    <optgroup label="中国">
+                        <option value="鳥取県">鳥取県</option>
+                        <option value="島根県">島根県</option>
+                        <option value="岡山県">岡山県</option>
+                        <option value="広島県">広島県</option>
+                        <option value="山口県">山口県</option>
+                    </optgroup>
+                    <optgroup label="四国">
+                        <option value="徳島県">徳島県</option>
+                        <option value="香川県">香川県</option>
+                        <option value="愛媛県">愛媛県</option>
+                        <option value="高知県">高知県</option>
+                    </optgroup>
+                    <optgroup label="九州・沖縄">
+                        <option value="福岡県">福岡県</option>
+                        <option value="佐賀県">佐賀県</option>
+                        <option value="長崎県">長崎県</option>
+                        <option value="熊本県">熊本県</option>
+                        <option value="大分県">大分県</option>
+                        <option value="宮崎県">宮崎県</option>
+                        <option value="鹿児島県">鹿児島県</option>
+                        <option value="沖縄県">沖縄県</option>
+                    </optgroup>
                 </select>
                 <select id="category">
                     <option value="">全ての雇用枠</option>
@@ -35,16 +111,43 @@
                     <option value="障害者枠">障害者枠</option>
                 </select>
                 <select id="period">
-                    <option value="all">全ての期間</option>
+                    <option value="all" selected>全ての期間</option>
                     <option value="1">今日</option>
                     <option value="3">3日以内</option>
-                    <option value="7" selected>今週（1週間以内）</option>
+                    <option value="7">今週（1週間以内）</option>
                 </select>
                 <button class="btn-search" onclick="filterJobs()">
                     <i class="fas fa-search"></i> 検索
                 </button>
+                <select id="sort-order" onchange="filterJobs()">
+                    <option value="date-desc">新着順</option>
+                    <option value="date-asc">古い順</option>
+                    <option value="salary-desc">給与が高い順</option>
+                </select>
+                <button id="favorite-filter" class="btn-search" style="background-color: transparent; border: 1px solid var(--border-color); color: var(--text-muted);" onclick="toggleFavoriteFilter()">
+                    <i class="far fa-star"></i> お気に入り
+                </button>
+                <button class="btn-search" style="background-color: var(--secondary);" onclick="syncFromGoogleDrive()">
+                    <i class="fab fa-google-drive"></i> Googleドライブ同期
+                </button>
+                <div style="margin-top: 10px; font-size: 0.75rem;">
+                    <a href="#" onclick="document.getElementById('import-html').click(); return false;" style="color: var(--text-muted); text-decoration: underline;">
+                        <i class="fas fa-file-upload"></i> 個別にファイルを読み込む
+                    </a>
+                </div>
+                <input type="file" id="import-html" style="display: none;" accept=".html">
+                <button class="btn-search" style="background-color: transparent; border: 1px solid var(--border-color); color: var(--text-muted);" onclick="clearImportedData()">
+                    <i class="fas fa-trash-alt"></i> クリア
+                </button>
+                <button id="restore-data" class="btn-search" style="background-color: transparent; border: 1px solid var(--accent); color: var(--accent); display: none;" onclick="restoreImportedData()">
+                    <i class="fas fa-undo"></i> 直前のデータを復元
+                </button>
             </div>
         </section>
+
+        <div id="result-count" class="result-count">
+            <!-- JavaScriptで動的に更新 -->
+        </div>
 
         <div id="job-grid" class="job-grid">
             <!-- JavaScriptで動的に生成 -->
@@ -68,6 +171,22 @@
             </div>
         </div>
     </div>
+
+    <!-- 警告・確認用モーダル -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content" style="max-width: 440px; text-align: center; padding: 40px 30px;">
+            <div style="font-size: 3.5rem; color: var(--danger); margin-bottom: 20px; filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.3));">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2 id="confirm-title" style="margin-bottom: 12px; font-size: 1.5rem;">警告</h2>
+            <p id="confirm-message" style="margin-bottom: 30px; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;"></p>
+            <div style="display: flex; gap: 12px; justify-content: center;">
+                <button id="confirm-cancel" class="btn-search" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: var(--text-main); flex: 1;">キャンセル</button>
+                <button id="confirm-ok" class="btn-search" style="background: var(--danger); color: white; border: none; flex: 1;">削除する</button>
+            </div>
+        </div>
+    </div>
+
 
     <script src="data/jobs_data.js"></script>
     <script src="app.js"></script>
