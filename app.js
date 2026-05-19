@@ -165,10 +165,18 @@ function filterJobs() {
             // 分割されたすべての単語（AND条件）が含まれているかチェック
             matchesKeyword = words.every(word => {
                 if (!word) return true;
+                
+                const salaryStr = job.salary || '規定による';
+                const hoursStr = job.workingHours || '規定による';
+                const holidayStr = job.holiday || '規定による';
+                
                 return job.title.toLowerCase().includes(word) || 
                        job.company.toLowerCase().includes(word) ||
                        job.type.toLowerCase().includes(word) ||
-                       job.description.toLowerCase().includes(word);
+                       job.description.toLowerCase().includes(word) ||
+                       salaryStr.toLowerCase().includes(word) ||
+                       hoursStr.toLowerCase().includes(word) ||
+                       holidayStr.toLowerCase().includes(word);
             });
         }
         
