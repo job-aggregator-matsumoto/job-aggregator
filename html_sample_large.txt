@@ -1,0 +1,754 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0054)https://www.hellowork.mhlw.go.jp/kensaku/GECA110030.do -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ハローワークインターネットサービス - 求人情報検索・一覧</title>
+
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="icon" href="https://www.hellowork.mhlw.go.jp/kensaku/jsp/img/favicon.ico">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/reset.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/buttons_green.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/table_green.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/navbar_green.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/page.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/progress_green.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/common_green.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/jquery-ui.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/font-awesome.min.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/accordion.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/accordion_style.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/navigation.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/navigation_style.css">
+
+
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" type="text/css" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/ECZ250.css">
+		<link rel="stylesheet" type="text/css" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/ECA110.css">
+		<link rel="stylesheet" type="text/css" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/ECZ110.css">
+		<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/tooltip.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/tooltip_style.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/tippy.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/float.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/float_style.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/buttons.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/button_style.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/searchList.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/searchList_style.css">
+<link rel="stylesheet" href="./ハローワークインターネットサービス - 求人情報検索・一覧_files/checkbox_style.css">
+</head>
+<body onload="init();">
+
+<div id="all">
+<div class="body-in"><header id="top_header" class="is_fixed">
+
+<div id="header" class="flex align_center last_right nowrap">
+	<a href="https://www.hellowork.mhlw.go.jp/index.html" class="flex nowrap">
+		<img class="top_image_logo" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/mhlwlogo-1.gif">
+		<img class="top_image_min769" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/logo_big.gif">
+		<img class="top_image_max768" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/logo_small.gif">
+	</a>
+	<div class="flex jus_end align_center">
+		<script type="text/javascript" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/ewbc.min.js.ダウンロード"></script>
+		<a href="javascript:void(0);" id="pt_enable">
+			<img class="img_small" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/yasashii.gif" alt="やさしいブラウザ・クラウド版はこちらからご利用ください" title="やさしいブラウザ">
+		</a>
+		<a href="https://www.mhlw.go.jp/index.html" target="_blank">
+			<img class="img_small ml05" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/000820328.jpg" alt="厚生労働省Webサイトはこちら" title="厚生労働省">
+		</a>
+<!-- 		<div style="min-width:40px"></div> -->
+	</div>
+</div><div id="breadcrumbs" class="m_side5p"><span>
+<a href="https://www.hellowork.mhlw.go.jp/index.html">トップ&nbsp;</a>
+&nbsp;&gt;&nbsp;求人検索&nbsp;
+</span></div>
+</header><p class="pagebottom"><a href="https://www.hellowork.mhlw.go.jp/kensaku/GECA110030.do#bottom">ページ<br>最下部へ<br><i class="fa fa-2x fa-chevron-down"></i></a></p>
+<div id="container" style="padding-top: 77.6px;">
+<div class="page_title">求人情報検索・一覧</div><hr class="media_nodisp">
+<div class="media_nodisp_pc"></div><form name="form_1" id="ID_form_1" method="post" action="https://www.hellowork.mhlw.go.jp/kensaku/GECA110030.do" novalidate="novalidate">
+<input type="text" style="position:absolute;visibility:hidden" disabled="">
+<div class="flex width99p mt05 pl05"><div class="flex align_center width100p_sd">
+									<i class="fa fa-user color_main mr05"></i>
+									<a id="ID_loginLink" class="mr2" href="https://kyushoku.hellowork.mhlw.go.jp/kyushoku/GEAA040010.do?action=initDisp&amp;screenId=GEAA040010">求職者マイページにログイン</a></div><div class="flex m_l_1_sd"><input class="button link_style modal_open mr2" id="ID_infTkRiyoDantaiBtn" name="infTkRiyoDantaiBtn" type="button" value="情報提供利用団体ＩＤを設定">
+<div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">ハローワーク求人・求職情報提供サービスの利用登録をしている利用団体（地方自治体・民間職業紹介事業者等）の方は、情報提供利用団体ＩＤを設定することで、それぞれの利用団体に提供することが同意されている求人情報を検索することができます。</div></div></div></div><div class="width100p mb05 mt2"><div class="width100p flex jus_center">
+									<i class="ds_assets dsa_search_fill color_main fs2_375 p_t_0_25"></i>
+									<div class="color_main fs2_375 fw700">詳しい条件で検索</div>
+</div></div>
+							<br>
+
+							<div class="accordion arrow_content mb0imp max_width_1088px_im"><div class="accordion-item arrowBtn_wrap"><button type="button" class="accordion-header arrowBtn_base arrowBtn_layout arrowBtn_font btn_textcenter arrowBtn_size color_main bg_color_none">　　求職番号入力<span class="accordion-icon arrowBtn_arrowLayout arrowBtn_arrowLocationKyushoku filter_main"><img src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/circle-chevron-down-solid.svg" class="accordion-icon_img accordion-icon_close"><img src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/circle-chevron-up-solid.svg" class="accordion-icon_img accordion-icon_open"></span></button><div class="accordion-content ksno-input-default-open"><div><div class="width100p mb1"><table id="ID_sub_table" class="normal mb1">
+<tbody><tr>
+<th class="dispnone_sd" scope="row">
+														<span>求職番号入力</span>
+													</th><td><div class="flex input"><div><a id="ID_kyujinLink" href="https://www.hellowork.mhlw.go.jp/member/mem_service02.html" target="_blank">
+																	事業所名等の公開について
+																</a><div class="fs0_875 m05 mt8px">
+																	ハローワーク受付票に記載されている求職番号を入力してください。
+																</div><div class="mt8px"><span class="restrict nolabel ">半角数字5桁-8桁以内</span>
+</div><div id="ID_msgKSNo" name="msgKSNo" class="flex input align_center mb03"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_5em grandparent_m_v_0 m_b_0" id="ID_kSNoJo" name="kSNoJo" maxlength="5" value=""></div></div>
+<div class="ta_left hyphen">-</div><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_8em grandparent_m_v_0 m_b_0" id="ID_kSNoGe" name="kSNoGe" maxlength="8" value=""></div></div>
+</div></div></div></td></tr>
+</tbody></table>
+</div></div></div></div></div><div class="width100p mb1"><table class="normal mb1">
+<tbody><tr>
+<th class="r08Th r08ThAccordion kensakusikata " scope="row" data-open="false"><div>
+										<span>求人情報検索のしかた（詳しい検索方法）</span>
+										<span></span>
+										<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="kensakusikata"><div class="r08ThAcWrapper"><div class="fs08 m05 mt8px">
+													希望する条件を入力して【検索する】ボタンを押してください。
+													<br class="br_pc">
+													かんたんな条件で検索したい場合は、【
+													<a id="ID_searchKantaniLink" class="mb05" href="https://www.hellowork.mhlw.go.jp/kensaku/GECA110030.do#ID_kensaku_float_stop">
+														かんたん検索を利用する
+													</a>
+													】ボタンを押してください。
+												</div><div class="fs08 m05">検索条件をクリアする場合、【条件をクリア】ボタンを押してください。</div>
+<div class="fs08 m05 display_pc"><img class="va_middle" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/help.svg" id="ID_dummy" name="dummy">
+													マークにマウスを合わせていただくと、各項目の記載要項や注意点をご覧いただけます。ぜひご利用ください。
+												</div><div class="fs08 m05 display_sd"><img class="va_middle" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/help.svg" id="ID_dummy" name="dummy">
+													マークにふれていただくと、各項目の記載要項や注意点をご覧いただけます。ぜひご利用ください。
+												</div></div></td></tr>
+</tbody></table>
+</div><table class="normal mb1">
+<tbody><tr>
+<th class="r08Th" scope="row"><div>
+		<span>求人区分</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label nes">必須</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">求人の区分は、①一般の方向け、②新卒または卒業されてから３年以内の方向け、③季節的な労働を希望されている方向け、④出稼ぎを希望されている方向け、⑤障害のある方向けとなっています。<br>①一般の方向けまたは⑤障害のある方向けの求人を選択した場合、「フルタイム」とフルタイムより労働時間が短い「パート」を選択することができます。<br>なお、②新卒または卒業されてから３年以内の方向けの求人には、高等学校卒業者は含まれません。</div></div>
+		</span>
+	</div></th><td class="iew"><div id="ID_kjKbnRadioBtn" name="kjKbnRadioBtn" class="flex input align_center mb03"><div><div class="flex parent_m_b_0"><div class="radio"><label id="ID_LkjKbnRadioBtn1" for="ID_kjKbnRadioBtn1"><input type="radio" id="ID_kjKbnRadioBtn1" name="kjKbnRadioBtn" value="1">一般求人</label></div>
+</div><div id="ID_ippanCKBox" name="ippanCKBox" class="flex input align_center mb03 pl1"><div class="checkbox"><label id="ID_LippanCKBox1" for="ID_ippanCKBox1"><input type="checkbox" id="ID_ippanCKBox1" name="ippanCKBox" value="1" disabled="">フルタイム　</label></div>
+<div class="checkbox"><label id="ID_LippanCKBox2" for="ID_ippanCKBox2"><input type="checkbox" id="ID_ippanCKBox2" name="ippanCKBox" value="2" disabled="">パート</label></div>
+</div><div class="flex"><div class="radio"><label id="ID_LkjKbnRadioBtn5" for="ID_kjKbnRadioBtn5"><input type="radio" id="ID_kjKbnRadioBtn5" name="kjKbnRadioBtn" value="5" checked="">障害のある方のための求人</label></div>
+</div><div id="ID_sGSYACKBox" name="sGSYACKBox" class="flex input align_center mb03 pl1"><div class="checkbox"><label id="ID_LsGSYACKBox1" for="ID_sGSYACKBox1"><input type="checkbox" id="ID_sGSYACKBox1" name="sGSYACKBox" value="1">フルタイム　</label></div>
+<div class="checkbox"><label id="ID_LsGSYACKBox2" for="ID_sGSYACKBox2"><input type="checkbox" id="ID_sGSYACKBox2" name="sGSYACKBox" value="2">パート</label></div>
+</div><div class="flex align_center"><div class="mr1 mb05"><div class="radio"><label id="ID_LkjKbnRadioBtn2" for="ID_kjKbnRadioBtn2"><input type="radio" id="ID_kjKbnRadioBtn2" name="kjKbnRadioBtn" value="2">新卒・既卒求人</label></div>
+</div><div class="mr1 mb05"><div class="radio"><label id="ID_LkjKbnRadioBtn3" for="ID_kjKbnRadioBtn3"><input type="radio" id="ID_kjKbnRadioBtn3" name="kjKbnRadioBtn" value="3">季節求人</label></div>
+</div><div class="mr1 mb05"><div class="radio"><label id="ID_LkjKbnRadioBtn4" for="ID_kjKbnRadioBtn4"><input type="radio" id="ID_kjKbnRadioBtn4" name="kjKbnRadioBtn" value="4">出稼ぎ求人</label></div>
+</div></div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="true"><div>
+		<span>就業場所</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後の就業場所を指定して検索を行うことができます。<br>都道府県、市区町村を指定して検索する場合は、「都道府県から選択」を選択してください。<br>鉄道等路線の沿線を指定して検索する場合は、「沿線から選択」を選択してください。<br><a class="tooltipLink_base tooltipLink_layout tooltipLink_iconBase tooltipLink_iconSize tooltipLink_iconImage" href="https://www.hellowork.mhlw.go.jp/member/job_offer_search04.html" target="_blank">沿線を選択する時の注意事項</a>通勤可能な労働市場圏等を指定して検索する場合は、「労働市場圏から選択」を選択してください。<br><a class="tooltipLink_base tooltipLink_layout tooltipLink_iconBase tooltipLink_iconSize tooltipLink_iconImage" href="https://www.hellowork.mhlw.go.jp/member/job_offer_search11.html" target="_blank">労働市場圏を選択する時の注意事項</a></div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 m05 mt8px">就業場所を以下のいずれか1つ指定して検索することができます。</div><div><div class="assistButtonDiv width100p_sd"><button type="button" class="button selected" id="ID_todohukenHiddenAccoBtn" name="todohukenHiddenAccoBtn" onclick="openTodofukenModal(&#39;3&#39;,&#39;todohukenHidden&#39;,&#39;todohukenNameLbl&#39;,true,&#39;都道府県から選択&#39;,&#39;都道府県、市区町村を選択してください。&lt;br&gt;都道府県は3つまで選択できます。&lt;br&gt;都道府県内の市区町村は5つまで選択できます。&#39;,&#39;&#39;,&#39;&#39;,false,true,true,true,&#39;3&#39;,&#39;3&#39;,&#39;5&#39;,&#39;5&#39;,false,false,true,&#39;todoufukenMap&#39;,&#39;ID_todohukenHidden&#39;,&#39;ID_todohukenNameLbl&#39;,&#39;TODOUFUKEN_FUNC&#39;,false,true,false);">都道府県から選択</button>
+</div><input type="hidden" id="ID_todohukenHidden" name="todohukenHidden" value="25,26,27">
+<div class="disp_none todofukenArea mb1" style="display: flex; align-items: center;"><div class="bg_label thin_mypage_back mr1">選択中</div><div class="mr1" id="ID_todohukenNameLbl" name="todohukenNameLbl">滋賀県　京都府　大阪府　</div><input class="button button sub" id="ID_clear" onclick="clearTdfk()" name="clear" type="button" value="クリア">
+</div><div class="assistButtonDiv width100p_sd"><button type="button" class="button grayout" id="ID_ensenHiddenAccoBtn" name="ensenHiddenAccoBtn" onclick="openAccordionAssist(&#39;3&#39;,&#39;ensenHidden&#39;,&#39;ensenNameLbl&#39;,true,&#39;沿線から選択&#39;,&#39;沿線を選択してください。&lt;br&gt;都道府県は3つまで選択できます。&lt;br&gt;都道府県内の沿線は2つまで選択できます。&#39;,&#39;沿線を選択する時の注意&#39;,&#39;ENSEN&#39;,false,true,false,false,&#39;3&#39;,&#39;2&#39;,&#39;null&#39;,&#39;null&#39;,false,true,false,&#39;ensenMap&#39;,&#39;ID_ensenHidden&#39;,&#39;ID_ensenNameLbl&#39;,&#39;ENSEN_FUNC&#39;,true,false,false);" disabled="">沿線から選択</button>
+</div><input type="hidden" id="ID_ensenHidden" name="ensenHidden" value="">
+<div class="disp_none ensenArea mb1"><div class="bg_label thin_mypage_back mr1">選択中</div><div class="disp_none ensenArea mr1" id="ID_ensenNameLbl" name="ensenNameLbl"></div><input class="button button sub" id="ID_clear" onclick="clearEnsen()" name="clear" type="button" value="クリア">
+</div><div class="assistButtonDiv width100p_sd"><button type="button" class="button grayout" id="ID_roudousijyoHiddenAccoBtn" name="roudousijyoHiddenAccoBtn" onclick="openAccordionAssist(&#39;3&#39;,&#39;roudousijyoHidden&#39;,&#39;roudousijyoNameLbl&#39;,true,&#39;労働市場圏から選択&#39;,&#39;労働市場圏を選択してください。&lt;br&gt;労働市場圏は2つまで選択できます。&#39;,&#39;労働市場圏を選択する時の注意&#39;,&#39;ROUDOU&#39;,true,false,false,false,&#39;2&#39;,&#39;null&#39;,&#39;null&#39;,&#39;null&#39;,false,false,false,&#39;roudoushijoukenMap&#39;,&#39;ID_roudousijyoHidden&#39;,&#39;ID_roudousijyoNameLbl&#39;,&#39;ROUDOU_FUNC&#39;,false,false,false);" disabled="">労働市場圏から選択</button>
+</div><input type="hidden" id="ID_roudousijyoHidden" name="roudousijyoHidden" value="">
+<div class="disp_none roudousijyoArea mb05"><div class="bg_label thin_mypage_back mr1">選択中</div><div class="disp_none roudousijyoArea mr1" id="ID_roudousijyoNameLbl" name="roudousijyoNameLbl"></div><input class="button button sub" id="ID_clear" onclick="clearRdsj()" name="clear" type="button" value="クリア">
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>フリーワード検索</span>
+		<span>
+			<span class="nes_label any">任意</span>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div id="ID_freeWordRadioBtn" name="freeWordRadioBtn" class="flex input align_center mb03 flex input align_center pt05"><div class="flex input align_center mb03 flex"><div class="m03"><div class="fb"><span class="restrict nolabel ">全角50文字以内</span></div><div><input type="text" class="in_width_40em parent_m_0 grandparent_m_0" id="ID_freeWordInput" name="freeWordInput" maxlength="50" value=""></div></div>
+</div><div class="flex p_l_0_25_sd"><div class="mr1"><div class="radio"><label id="ID_LfreeWordRadioBtn0" for="ID_freeWordRadioBtn0"><input type="radio" id="ID_freeWordRadioBtn0" name="freeWordRadioBtn" value="0">いずれかを含む求人</label></div>
+</div><div class="mr1"><div class="radio"><label id="ID_LfreeWordRadioBtn1" for="ID_freeWordRadioBtn1"><input type="radio" id="ID_freeWordRadioBtn1" name="freeWordRadioBtn" value="1">全て含む求人を検索</label></div>
+</div><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">求人情報の仕事の内容、必要な経験や事業内容等に入力された文字をフリーワード（全角）で検索することができます。空白で区切ることにより、複数のフリーワードで検索することができます。</div></div></div><div class="flex input align_center mb03 flex"><div class="m03"><div class="fb"><span class="restrict nolabel ">NOT検索　全角50文字以内</span></div><div><input type="text" class="in_width_40em grandparent_m_r_0" id="ID_nOTKNSKFreeWordInput" name="nOTKNSKFreeWordInput" maxlength="50" value=""><span>をのぞく</span></div></div>
+</div><div class="fs0_875 color_vivid_red m_0">
+					※上記の【求人区分】で「新卒・既卒求人」を選択した場合は、必要な経験等は検索条件に設定できません。
+				</div><div id="ID_freeCKBox" name="freeCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div class="checkbox"><label id="ID_LfreeCKBox1" for="ID_freeCKBox1"><input type="checkbox" id="ID_freeCKBox1" name="freeCKBox" value="1">職種　</label></div>
+<div class="checkbox"><label id="ID_LfreeCKBox2" for="ID_freeCKBox2"><input type="checkbox" id="ID_freeCKBox2" name="freeCKBox" value="2">事業所名　</label></div>
+<div class="checkbox"><label id="ID_LfreeCKBox3" for="ID_freeCKBox3"><input type="checkbox" id="ID_freeCKBox3" name="freeCKBox" value="3">仕事内容　</label></div>
+<div class="checkbox"><label id="ID_LfreeCKBox4" for="ID_freeCKBox4"><input type="checkbox" id="ID_freeCKBox4" name="freeCKBox" value="4">最寄り駅等　</label></div>
+<div class="checkbox"><label id="ID_LfreeCKBox5" for="ID_freeCKBox5"><input type="checkbox" id="ID_freeCKBox5" name="freeCKBox" value="5">就業場所　</label></div>
+<div class="checkbox"><label id="ID_LfreeCKBox6" for="ID_freeCKBox6"><input type="checkbox" id="ID_freeCKBox6" name="freeCKBox" value="6">事業内容　</label></div>
+<div class="checkbox"><label id="ID_LfreeCKBox7" for="ID_freeCKBox7"><input type="checkbox" id="ID_freeCKBox7" name="freeCKBox" value="7">必要な免許・資格　</label></div>
+<div class="checkbox"><label id="ID_LfreeCKBox8" for="ID_freeCKBox8"><input type="checkbox" id="ID_freeCKBox8" name="freeCKBox" value="8">必要な経験等　</label></div>
+<div class="checkbox"><label id="ID_LfreeCKBox9" for="ID_freeCKBox9"><input type="checkbox" id="ID_freeCKBox9" name="freeCKBox" value="9">その他（特記事項欄など）　</label></div>
+<div class="flex jus_end"><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">特定の項目で絞り込みをしたい場合は、チェックボックスにチェックを入れてください。いずれにもチェックがされていないときは、すべての項目を検索対象として検索結果を表示します。</div></div></div></div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>職種</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後の職種を、大きなカテゴリで３つ（大きなカテゴリ内の小さなカテゴリは５つ）まで指定して検索を行うことができます。ただし、「こだわらない」を選択した場合は、小さなカテゴリ内で指定した職種は無効となりますので、ご注意ください。<br>また、「職業分類を選択」から、職業分類コードを選択または直接入力して検索することもできます 。<br><a class="tooltipLink_base tooltipLink_layout tooltipLink_iconBase tooltipLink_iconSize tooltipLink_iconImage" href="https://www.hellowork.mhlw.go.jp/info/mhlw_job_dictionary.html" target="_blank">職業分類コード一覧</a></div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 mb05 mt8px">
+				【職種を選択】又は【職業分類を選択】ボタンを押して、検索する職種を選択してください。職業分類コードを直接入力することもできます（
+				<a id="ID_kyujinLink" href="https://www.hellowork.mhlw.go.jp/info/mhlw_job_dictionary.html" target="_blank">職業分類コード一覧</a>
+				）。
+			</div><div class="flex align_center mt05"><div><button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokushuAssist(&#39;3&#39;,&#39;kiboSuruSKSU1Hidden&#39;,&#39;kiboSuruSKSU1Label&#39;,true);">職種を選択</button>
+</div><div class="ml1"><a id="ID_sksu1ClearBtn" class="button sub" href="javascript:void(0);">クリア</a></div><div><div class="ml1" name="kiboSuruSKSU1Label" id="ID_kiboSuruSKSU1Label">&nbsp;</div>
+</div></div><div class="flex align_center mt05"><div><button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokushuAssist(&#39;3&#39;,&#39;kiboSuruSKSU2Hidden&#39;,&#39;kiboSuruSKSU2Label&#39;,true);">職種を選択</button>
+</div><div class="ml1"><a id="ID_sksu2ClearBtn" class="button sub" href="javascript:void(0);">クリア</a></div><div><div class="ml1" name="kiboSuruSKSU2Label" id="ID_kiboSuruSKSU2Label">&nbsp;</div>
+</div></div><div class="flex align_center mt05"><div><button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokushuAssist(&#39;3&#39;,&#39;kiboSuruSKSU3Hidden&#39;,&#39;kiboSuruSKSU3Label&#39;,true);">職種を選択</button>
+</div><div class="ml1"><a id="ID_sksu3ClearBtn" class="button sub" href="javascript:void(0);">クリア</a></div><div><div class="ml1" name="kiboSuruSKSU3Label" id="ID_kiboSuruSKSU3Label">&nbsp;</div>
+</div></div><hr>
+<div id="ID_msgSKGYBRUI1" name="msgSKGYBRUI1" class="flex input align_center mb03"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_5em" id="ID_sKGYBRUIJo1" name="sKGYBRUIJo1" maxlength="3" value=""></div></div>
+<div class="ta_left hyphen">-</div><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em" id="ID_sKGYBRUIGe1" name="sKGYBRUIGe1" maxlength="2" value=""></div></div>
+<div class="flex Button"><button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokubunAssist(&#39;3&#39;,&#39;sKGYBRUIJo1,sKGYBRUIGe1&#39;,&#39;sKGYBRUI1Label&#39;,&#39;1,4&#39;,&#39;2&#39;,true);">職業分類を選択</button>
+</div><div class="ml1" name="sKGYBRUI1Label" id="ID_sKGYBRUI1Label">&nbsp;</div>
+</div><div id="ID_msgSKGYBRUI2" name="msgSKGYBRUI2" class="flex input align_center mb03"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_5em" id="ID_sKGYBRUIJo2" name="sKGYBRUIJo2" maxlength="3" value=""></div></div>
+<div class="ta_left hyphen">-</div><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em" id="ID_sKGYBRUIGe2" name="sKGYBRUIGe2" maxlength="2" value=""></div></div>
+<div class="flex Button"><button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokubunAssist(&#39;3&#39;,&#39;sKGYBRUIJo2,sKGYBRUIGe2&#39;,&#39;sKGYBRUI2Label&#39;,&#39;1,4&#39;,&#39;2&#39;,true);">職業分類を選択</button>
+</div><div class="ml1" name="sKGYBRUI2Label" id="ID_sKGYBRUI2Label">&nbsp;</div>
+</div><div id="ID_msgSKGYBRUI3" name="msgSKGYBRUI3" class="flex input align_center mb03"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_5em" id="ID_sKGYBRUIJo3" name="sKGYBRUIJo3" maxlength="3" value=""></div></div>
+<div class="ta_left hyphen">-</div><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em" id="ID_sKGYBRUIGe3" name="sKGYBRUIGe3" maxlength="2" value=""></div></div>
+<div class="flex Button"><button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokubunAssist(&#39;3&#39;,&#39;sKGYBRUIJo3,sKGYBRUIGe3&#39;,&#39;sKGYBRUI3Label&#39;,&#39;1,4&#39;,&#39;2&#39;,true);">職業分類を選択</button>
+</div><div class="ml1" name="sKGYBRUI3Label" id="ID_sKGYBRUI3Label">&nbsp;</div>
+</div><div class="flex align_center jus_end mt8px">
+				<a href="https://shigoto.mhlw.go.jp/User/Search/Field" target="_blank">
+					<img class="width70p disp_block ml_auto" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/jobtag_2.png" alt="選択した職種をjobtagで調べてみる" title="jobtag">
+				</a>
+			</div><div class="flex align_center jus_end mb05"><div class="mr05">
+					job tagについて
+				</div><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">job tagは職業の情報を総合的に提供するサイトです。求人の職種と同じ職業分類に属する職業について、仕事の内容や求められるスキル・知識などを調べることができます。</div></div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>雇用形態</span>
+		<span>
+			<span class="nes_label any">任意</span>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper">
+			<span class="bg_label thin_gray_back mt8px label_clear">フルタイム雇用</span>
+			<div class="fs0_875 color_vivid_red mt8px">
+				※上記の【求人区分】で「一般求人（フルタイム）」、「障害のある方のための求人（フルタイム）」、「新卒・既卒求人」、「季節求人」、「出稼ぎ求人」を選択した場合のみ、検索条件に設定できます。
+			</div><div class="flex input p_l_0_25_sd"><div id="ID_koyoFltmCKBox" name="koyoFltmCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LkoyoFltmCKBox1" for="ID_koyoFltmCKBox1"><input type="checkbox" id="ID_koyoFltmCKBox1" name="koyoFltmCKBox" value="1" disabled="">正社員</label></div>
+<div class="checkbox"><label id="ID_LkoyoFltmCKBox2" for="ID_koyoFltmCKBox2"><input type="checkbox" id="ID_koyoFltmCKBox2" name="koyoFltmCKBox" value="2" disabled="">正社員以外</label></div>
+<div class="checkbox"><label id="ID_LkoyoFltmCKBox3" for="ID_koyoFltmCKBox3"><input type="checkbox" id="ID_koyoFltmCKBox3" name="koyoFltmCKBox" value="3" disabled="">有期雇用派遣労働者</label></div>
+<div class="checkbox"><label id="ID_LkoyoFltmCKBox4" for="ID_koyoFltmCKBox4"><input type="checkbox" id="ID_koyoFltmCKBox4" name="koyoFltmCKBox" value="4" disabled="">無期雇用派遣労働者</label></div>
+</div></div>
+			<span class="bg_label thin_gray_back mt8px label_clear">パート雇用</span>
+			<div class="fs0_875 color_vivid_red mt8px">
+				※上記の【求人区分】で「一般求人（パート）」、「障害のある方のための求人（パート）」を選択した場合のみ、検索条件に設定できます。
+			</div><div class="flex input p_l_0_25_sd"><div id="ID_koyoPartCKBox" name="koyoPartCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LkoyoPartCKBox5" for="ID_koyoPartCKBox5"><input type="checkbox" id="ID_koyoPartCKBox5" name="koyoPartCKBox" value="5" disabled="">パート労働者</label></div>
+<div class="checkbox"><label id="ID_LkoyoPartCKBox6" for="ID_koyoPartCKBox6"><input type="checkbox" id="ID_koyoPartCKBox6" name="koyoPartCKBox" value="6" disabled="">有期雇用派遣パート</label></div>
+<div class="checkbox"><label id="ID_LkoyoPartCKBox7" for="ID_koyoPartCKBox7"><input type="checkbox" id="ID_koyoPartCKBox7" name="koyoPartCKBox" value="7" disabled="">無期雇用派遣パート</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="true"><div>
+		<span>新着求人</span>
+		<span class="flex_sd last_right_sd">
+		<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">ハローワークにおいて検索日から2日（当日・前日）または１週間以内に受理された求人を指定して、検索することができます。<br>なお、新着求人を指定しない場合は、2日（当日・前日）または１週間以内に受理された求人も含めて検索します。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div id="ID_newArrivedCKBox" name="newArrivedCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div class="checkbox"><label id="ID_LnewArrivedCKBox1" for="ID_newArrivedCKBox1"><input type="checkbox" id="ID_newArrivedCKBox1" name="newArrivedCKBox" value="1">新着（当日・前日）の求人情報から検索</label></div>
+<div class="checkbox"><label id="ID_LnewArrivedCKBox2" for="ID_newArrivedCKBox2"><input type="checkbox" id="ID_newArrivedCKBox2" name="newArrivedCKBox" value="2" checked="">新着（１週間以内）の求人情報から検索</label></div>
+</div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>年齢</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">ご自身の年齢を入力して、検索することができます。<br>技能・ノウハウの継承の観点から特定の年齢層に限定した求人等の特定の年齢層にご自身の年齢が含まれる求人を検索できます。<br>「年齢不問」を選択すると募集年齢が不問となっている求人が、「不問をのぞく」を選択すると年齢制限のある求人が検索できます。<br><a class="tooltipLink_base tooltipLink_layout tooltipLink_iconBase tooltipLink_iconSize tooltipLink_iconImage" href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/topics/tp070831-1.html" target="_blank">年齢制限</a></div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px pb05">※上記の【求人区分】で「新卒・既卒求人」以外を選択した場合のみ、検索条件に設定できます。</div><div><span class="restrict nolabel ">半角数字</span>
+</div><div class="input"><div id="ID_msgNenrei" name="msgNenrei" class="flex input align_center mb03"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em grandparent_m_v_0" id="ID_nenreiInput" name="nenreiInput" maxlength="2" value=""><span>歳</span></div></div>
+</div></div><div class="flex checks"><div id="ID_nenreiCKBox" name="nenreiCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div class="checkbox"><label id="ID_LnenreiCKBox1" for="ID_nenreiCKBox1"><input type="checkbox" id="ID_nenreiCKBox1" name="nenreiCKBox" value="1">不問のみ</label></div>
+<div class="checkbox"><label id="ID_LnenreiCKBox2" for="ID_nenreiCKBox2"><input type="checkbox" id="ID_nenreiCKBox2" name="nenreiCKBox" value="2">不問をのぞく</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>雇用期間</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">雇用期間を指定して、検索することができます。<br>なお、定年の定めがある場合は、求人を行った企業（事業所）の就業規則の定め等により定年に達した日等で退職となる場合があります。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="flex input p_l_0_25_sd"><div id="ID_koyoKikanCKBox" name="koyoKikanCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LkoyoKikanCKBox1" for="ID_koyoKikanCKBox1"><input type="checkbox" id="ID_koyoKikanCKBox1" name="koyoKikanCKBox" value="1">定めなし</label></div>
+<div class="checkbox"><label id="ID_LkoyoKikanCKBox2" for="ID_koyoKikanCKBox2"><input type="checkbox" id="ID_koyoKikanCKBox2" name="koyoKikanCKBox" value="2">定めあり（４ヶ月以上）</label></div>
+<div class="checkbox"><label id="ID_LkoyoKikanCKBox3" for="ID_koyoKikanCKBox3"><input type="checkbox" id="ID_koyoKikanCKBox3" name="koyoKikanCKBox" value="3">定めあり（４ヶ月未満）</label></div>
+<div class="checkbox"><label id="ID_LkoyoKikanCKBox4" for="ID_koyoKikanCKBox4"><input type="checkbox" id="ID_koyoKikanCKBox4" name="koyoKikanCKBox" value="4">日々または１ヶ月未満</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>契約更新の可能性</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">雇用期間に定めがある（有期雇用）求人について、雇用期間満了後に雇用契約の更新有無を指定して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px">※本項目を選択した場合、雇用期間の定めありの求人のみが検索対象となります。</div><div class="flex input"><div id="ID_knsiAriCKBox" name="knsiAriCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div class="checkbox"><label id="ID_LkeiyakuKsnNoKnsiAriCKBox1" for="ID_keiyakuKsnNoKnsiAriCKBox1"><input type="checkbox" id="ID_keiyakuKsnNoKnsiAriCKBox1" name="keiyakuKsnNoKnsiAriCKBox" value="1">あり</label></div>
+<div>［</div>
+<div class="checkbox"><label id="ID_LknsiAriCKBox1" for="ID_knsiAriCKBox1"><input type="checkbox" id="ID_knsiAriCKBox1" name="knsiAriCKBox" value="1">原則更新</label></div>
+<div class="checkbox"><label id="ID_LknsiAriCKBox2" for="ID_knsiAriCKBox2"><input type="checkbox" id="ID_knsiAriCKBox2" name="knsiAriCKBox" value="2">条件あり</label></div>
+<div>］</div>
+<div class="checkbox"><label id="ID_LkeiyakuKsnNoKnsiAriCKBox0" for="ID_keiyakuKsnNoKnsiAriCKBox0"><input type="checkbox" id="ID_keiyakuKsnNoKnsiAriCKBox0" name="keiyakuKsnNoKnsiAriCKBox" value="0">なし</label></div>
+</div></div></div></td></tr>
+<tr class="ippan_full daisotsu shougai_full kisetsu dekasegi" style="display: none;">
+<th class="r08Th r08ThAccordion " scope="row" data-open="true"><div>
+		<span>賃金</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に毎月決まって支給される賃金（いわゆる基本給）の希望額を入力して、検索することができます。<br>検索すると求人情報の賃金額の範囲内に入力した希望額が含まれる求人が表示されます。<br>手当等も含めた賃金を検索する場合は、「手当・固定残業代を含む」を選択してください。<br>なお、求人情報の賃金額は、所得税等を控除する前の賃金額であり、実際に支給される各種控除後の額（支給額）とは異なります。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px mb05">※希望賃金を設定するためには求人区分【フルタイム｜月給】または【パート｜時給】の選択が必要です。</div><div class="flex"><div>月給（月額換算額）</div>
+				<span class="restrict m_t_0_25">半角数字、1円単位</span>
+			</div><div id="ID_msgGkkyIn" name="msgGkkyIn" class="flex input align_center mb03"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_8em m_v_0" id="ID_gkkyIn" name="gkkyIn" maxlength="8" value="" disabled=""><span>円以上</span></div></div>
+</div><div id="ID_msgGkkyIn" name="msgGkkyIn" class="flex input align_center mb03 p_l_0_25_sd"><div class="checkbox"><label id="ID_LtatZngyCKBox1" for="ID_tatZngyCKBox1"><input type="checkbox" class="grandparent_m_t_0" id="ID_tatZngyCKBox1" name="tatZngyCKBox" value="1" checked="">手当・固定残業代を含む</label></div>
+</div></div></td></tr>
+<tr class="ippan_part shougai_part" style="display: none;">
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>賃金</span>
+		<span>
+			<span class="nes_label any">任意</span>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px mb05">※希望賃金を設定するためには求人区分【フルタイム｜月給】または【パート｜時給】の選択が必要です。</div><div class="flex"><div>時給</div>
+				<span class="restrict m_t_0_25">半角数字、1円単位</span>
+			</div><div id="ID_msgJikyIn" name="msgJikyIn" class="flex input align_center mb03"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_8em m_v_0" id="ID_jikyIn" name="jikyIn" maxlength="8" value="" disabled=""><span>円以上</span></div></div>
+</div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>既卒者の応募</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">大学等を卒業後３年以内の方を対象とした求人を指定して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px">※既卒者の応募を設定するためには求人区分【新卒・既卒求人】の選択が必要です。</div><div class="flex input checks"><div id="ID_kstKaCKBox" name="kstKaCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div class="checkbox"><label id="ID_LkstKaCKBox1" for="ID_kstKaCKBox1"><input type="checkbox" id="ID_kstKaCKBox1" name="kstKaCKBox" value="1" disabled="">既卒者の応募可</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>学歴</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">大学等を卒業される見込み又は大学等を卒業後３年以内の方を対象に、最終学歴を選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px">※学歴を設定するためには求人区分【新卒・既卒求人】の選択が必要です。</div><div><div class="flex input left"><div class="m05"><div class="m03"><div><select id="ID_gkrkCmbBox" name="gkrkCmbBox" class="in_width_8em grandparent_m_v_0" disabled="">
+<option value="" selected=""></option>
+<option value="1">大学院</option>
+<option value="2">大学</option>
+<option value="3">短大</option>
+<option value="4">高専</option>
+<option value="5">専修学校</option>
+<option value="6">能開校</option>
+</select></div>
+</div>
+</div></div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>学歴・経験・資格の不問</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">大学等を卒業される見込み又は大学等を卒業後３年以内でない方を対象に、最終学歴等の不問や普通自動車免許の取得状況を選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt1 mt8px">※上記の【求人区分】で「新卒・既卒求人」以外を選択した場合のみ、検索条件に設定できます。</div><div class="flex input"><div id="ID_hynaMenkyoSkkuFumonCKBox" name="hynaMenkyoSkkuFumonCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div id="ID_hynaKikntFumonCKBox" name="hynaKikntFumonCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div id="ID_grkiFumonCKBox" name="grkiFumonCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div class="checkbox"><label id="ID_LgrkiFumonCKBox1" for="ID_grkiFumonCKBox1"><input type="checkbox" id="ID_grkiFumonCKBox1" name="grkiFumonCKBox" value="1">学歴不問</label></div>
+<div class="checkbox"><label id="ID_LhynaKikntFumonCKBox1" for="ID_hynaKikntFumonCKBox1"><input type="checkbox" id="ID_hynaKikntFumonCKBox1" name="hynaKikntFumonCKBox" value="1">経験不問</label></div>
+<div class="checkbox"><label id="ID_LhynaMenkyoSkkuFumonCKBox1" for="ID_hynaMenkyoSkkuFumonCKBox1"><input type="checkbox" id="ID_hynaMenkyoSkkuFumonCKBox1" name="hynaMenkyoSkkuFumonCKBox" value="1">免許・資格不問</label></div>
+</div></div></div></div><hr>
+
+			<span class="bg_label thin_gray_back label_clear">普通自動車運転免許</span>
+			<div id="ID_jdsMenkyoCKBox" name="jdsMenkyoCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div class="checkbox"><label id="ID_LjdsMenkyoCKBox1" for="ID_jdsMenkyoCKBox1"><input type="checkbox" id="ID_jdsMenkyoCKBox1" name="jdsMenkyoCKBox" value="1">必須</label></div>
+<div class="checkbox"><label id="ID_LjdsMenkyoCKBox2" for="ID_jdsMenkyoCKBox2"><input type="checkbox" id="ID_jdsMenkyoCKBox2" name="jdsMenkyoCKBox" value="2">あれば尚可</label></div>
+<div class="checkbox"><label id="ID_LjdsMenkyoCKBox4" for="ID_jdsMenkyoCKBox4"><input type="checkbox" id="ID_jdsMenkyoCKBox4" name="jdsMenkyoCKBox" value="4">不問</label></div>
+<div class="checkbox"><label id="ID_LjdsMenkyoCKBox3" for="ID_jdsMenkyoCKBox3"><input type="checkbox" id="ID_jdsMenkyoCKBox3" name="jdsMenkyoCKBox" value="3" disabled="">AT限定可</label></div>
+</div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>必要な免許・資格</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">就職時に必要とされる免許・資格を選択して、検索することができます。<br>また、選択した免許・資格を除いて検索する場合は、「のぞく」を選択してください。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="mt8px"><a id="ID_menkyo_shikaku" href="https://www.hellowork.mhlw.go.jp/info/license_list01.html" target="_blank">免許・資格コード一覧</a></div><div class="flex mt8px"><a id="ID_kyoiku" href="https://www.kyufu.mhlw.go.jp/kensaku/" target="_blank">教育訓練講座</a>
+					<i class="ds_assets dsa_new_window_fill color_main fs1_25 m_t_auto"></i>
+			</div><div class="fs0_875 mt8px">【免許・資格】ボタンを押して、該当する免許・資格を選択してください。</div><div class="fs0_875 color_vivid_red mt8px">※上記の【求人区分】で「新卒・既卒求人」以外を選択した場合のみ、検索条件に設定できます。</div><div class="fs0_875 color_vivid_red pb05 mt8px">※普通自動車免許以外のものを選択・入力してください。</div><div id="ID_msgMenkyoSkku1" name="msgMenkyoSkku1" class="flex input align_center mb03 flex align_center"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_5em grandparent_m_v_0" id="ID_menkyoSkku1In" name="menkyoSkku1In" maxlength="4" value=""></div></div>
+<div class="flex Button"><input type="button" class="button" id="ID_Btn" name="Btn" onclick="openCodeAssist(&#39;3&#39;,&#39;5&#39;,&#39;menkyoSkku1In&#39;,&#39;menkyoSkku1&#39;,&#39;1&#39;,&#39;&#39;,&#39;-1&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,true);" value="免許・資格">
+</div><div class="in_width_11em" name="menkyoSkku1" id="ID_menkyoSkku1">&nbsp;</div>
+<div class="p_l_0_25_sd m_0"><div class="checkbox"><label id="ID_LmenkyoSkkuNo1CKBox1" for="ID_menkyoSkkuNo1CKBox1"><input type="checkbox" class="grandparent_m_h_0" id="ID_menkyoSkkuNo1CKBox1" name="menkyoSkkuNo1CKBox" value="1">のぞく</label></div>
+</div></div><div id="ID_msgMenkyoSkku2" name="msgMenkyoSkku2" class="flex input align_center mb03 flex align_center pt05"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_5em grandparent_m_v_0" id="ID_menkyoSkku2In" name="menkyoSkku2In" maxlength="4" value=""></div></div>
+<div class="flex Button"><input type="button" class="button" id="ID_Btn" name="Btn" onclick="openCodeAssist(&#39;3&#39;,&#39;5&#39;,&#39;menkyoSkku2In&#39;,&#39;menkyoSkku2&#39;,&#39;1&#39;,&#39;&#39;,&#39;-1&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,true);" value="免許・資格">
+</div><div class="in_width_11em" name="menkyoSkku2" id="ID_menkyoSkku2">&nbsp;</div>
+<div class="p_l_0_25_sd m_0"><div class="checkbox"><label id="ID_LmenkyoSkkuNo2CKBox1" for="ID_menkyoSkkuNo2CKBox1"><input type="checkbox" class="grandparent_m_h_0" id="ID_menkyoSkkuNo2CKBox1" name="menkyoSkkuNo2CKBox" value="1">のぞく</label></div>
+</div></div><div id="ID_msgMenkyoSkku3" name="msgMenkyoSkku3" class="flex input align_center mb03 flex align_center pt05"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_5em grandparent_m_v_0" id="ID_menkyoSkku3In" name="menkyoSkku3In" maxlength="4" value=""></div></div>
+<div class="flex Button"><input type="button" class="button" id="ID_Btn" name="Btn" onclick="openCodeAssist(&#39;3&#39;,&#39;5&#39;,&#39;menkyoSkku3In&#39;,&#39;menkyoSkku3&#39;,&#39;1&#39;,&#39;&#39;,&#39;-1&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,true);" value="免許・資格">
+</div><div class="in_width_11em" name="menkyoSkku3" id="ID_menkyoSkku3">&nbsp;</div>
+<div class="p_l_0_25_sd m_0"><div class="checkbox"><label id="ID_LmenkyoSkkuNo3CKBox1" for="ID_menkyoSkkuNo3CKBox1"><input type="checkbox" class="grandparent_m_h_0" id="ID_menkyoSkkuNo3CKBox1" name="menkyoSkkuNo3CKBox" value="1">のぞく</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>賞与（前年度実績）</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">前年度の賞与（ボーナス）の支給実績を選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div id="ID_shoyoAriCKBox" name="shoyoAriCKBox" class="flex input align_center mb03 p_l_0_25_sd"><div class="checkbox"><label id="ID_LshoyoAriCKBox1" for="ID_shoyoAriCKBox1"><input type="checkbox" id="ID_shoyoAriCKBox1" name="shoyoAriCKBox" value="1">あり</label></div>
+</div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>希望する就業時間</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後の就業時間の範囲を選択して、検索することができます。<br>検索すると、求人情報の就業時間の範囲内に、選択した就業時間が含まれる求人が表示されます。<br>交代制勤務等を採用していない求人を検索する場合は、「交代制（シフト制）を含まない」等を選択してください。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="flex input"><div class="ml05 m_v_0"><div id="ID_shgJnStaJiCmbBox" name="shgJnStaJiCmbBox" class="flex input align_center mb03"><select id="ID_shgJnStaJiCmbBoxHH" name="shgJnStaJiCmbBoxHH" class="in_width_5to4em">
+<option value="">&nbsp;</option>
+<option value="00">0</option>
+<option value="01">1</option>
+<option value="02">2</option>
+<option value="03">3</option>
+<option value="04">4</option>
+<option value="05">5</option>
+<option value="06">6</option>
+<option value="07">7</option>
+<option value="08">8</option>
+<option value="09">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+</select><span class="fs08">時</span>
+<select id="ID_shgJnStaFunCmbBoxMM" name="shgJnStaFunCmbBoxMM" class="in_width_5to4em">
+<option value="">&nbsp;</option>
+<option value="00">0</option>
+<option value="10">10</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="40">40</option>
+<option value="50">50</option>
+</select><span class="fs08">分</span>
+</div></div><div><div>～</div></div><div class="ml05 m_v_0"><div id="ID_shgJnEndJiCmbBox" name="shgJnEndJiCmbBox" class="flex input align_center mb03"><select id="ID_shgJnEndJiCmbBoxHH" name="shgJnEndJiCmbBoxHH" class="in_width_5to4em">
+<option value="">&nbsp;</option>
+<option value="00">0</option>
+<option value="01">1</option>
+<option value="02">2</option>
+<option value="03">3</option>
+<option value="04">4</option>
+<option value="05">5</option>
+<option value="06">6</option>
+<option value="07">7</option>
+<option value="08">8</option>
+<option value="09">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+</select><span class="fs08">時</span>
+<select id="ID_shgJnEndFunCmbBoxMM" name="shgJnEndFunCmbBoxMM" class="in_width_5to4em">
+<option value="">&nbsp;</option>
+<option value="00">0</option>
+<option value="10">10</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="40">40</option>
+<option value="50">50</option>
+</select><span class="fs08">分</span>
+</div></div></div><div class="flex input p_l_0_25_sd"><div id="ID_kiboShgJnCKBox" name="kiboShgJnCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LkiboShgJnCKBox1" for="ID_kiboShgJnCKBox1"><input type="checkbox" id="ID_kiboShgJnCKBox1" name="kiboShgJnCKBox" value="1">交代制（シフト制）を含まない</label></div>
+<div class="checkbox"><label id="ID_LkiboShgJnCKBox2" for="ID_kiboShgJnCKBox2"><input type="checkbox" id="ID_kiboShgJnCKBox2" name="kiboShgJnCKBox" value="2">裁量労働制を含まない</label></div>
+<div class="checkbox"><label id="ID_LkiboShgJnCKBox3" for="ID_kiboShgJnCKBox3"><input type="checkbox" id="ID_kiboShgJnCKBox3" name="kiboShgJnCKBox" value="3">変形労働時間制を含まない</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>時間外</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に見込まれる１箇月当たりの平均時間外労働（残業）時間を選択して、検索することができます。<br>「月平均時間以内」欄に、１箇月当たりの平均時間外労働（残業）時間の上限を入力（半角数字）して、入力した時間外労働（残業）時間以下の求人を検索できます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="flex input"><div class="m_0 p_l_0_25_sd"><div class="flex radios"><div id="ID_jkgiRadioBtn" name="jkgiRadioBtn" class="flex input align_center mb03"><div class="radio"><label id="ID_LjkgiRadioBtn0" for="ID_jkgiRadioBtn0"><input type="radio" id="ID_jkgiRadioBtn0" name="jkgiRadioBtn" value="0" checked="">指定しない</label></div>
+<div class="radio"><label id="ID_LjkgiRadioBtn1" for="ID_jkgiRadioBtn1"><input type="radio" id="ID_jkgiRadioBtn1" name="jkgiRadioBtn" value="1">あり</label></div>
+<div class="radio"><label id="ID_LjkgiRadioBtn2" for="ID_jkgiRadioBtn2"><input type="radio" id="ID_jkgiRadioBtn2" name="jkgiRadioBtn" value="2">なし</label></div>
+</div></div></div></div><hr>
+<div class="fs0_875 color_vivid_red">「あり」を選択した場合のみ、検索条件に設定できます。</div><div class="flex input"><div class="m_b_0"><div><span class="restrict nolabel">半角数字</span>
+</div><div><div id="ID_msgThkin" name="msgThkin" class="flex input align_center mb03"><span class="mr05">月平均</span><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="talign-right in_width_4em m_t_0 m_b_0" id="ID_thkin" name="thkin" maxlength="2" value="" disabled=""><span>時間以内</span></div></div>
+</div></div></div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>週所定労働日数</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">１週間当たりの所定労働日数を選択して、検索することができます。<br>なお、「程度」を選択した場合、入力された数字に対して「±１日」の範囲で検索を行います。<br>例えば４日を入力した場合、週所定労働日数が３日～５日の範囲にある求人情報が検索されます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px mb05">※週所定労働日数を設定するためには求人区分【パート】の選択が必要です。</div><div class="flex input"><div id="ID_sstiRodoNissuIjoRadioBtn" name="sstiRodoNissuIjoRadioBtn" class="flex input align_center mb03"><div class="m03"><div><select id="ID_sstiRodoNissu" name="sstiRodoNissu" class="in_width_5to4em m_v_0 grandparent_m_0" disabled="">
+<option value="" selected=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+</select></div>
+</div>
+<div>日</div><div class="radio"><label id="ID_LsstiRodoNissuIjoRadioBtn1" for="ID_sstiRodoNissuIjoRadioBtn1"><input type="radio" id="ID_sstiRodoNissuIjoRadioBtn1" name="sstiRodoNissuIjoRadioBtn" value="1" disabled="">以上</label></div>
+<div class="radio"><label id="ID_LsstiRodoNissuIjoRadioBtn2" for="ID_sstiRodoNissuIjoRadioBtn2"><input type="radio" id="ID_sstiRodoNissuIjoRadioBtn2" name="sstiRodoNissuIjoRadioBtn" value="2" disabled="">程度</label></div>
+<div class="radio"><label id="ID_LsstiRodoNissuIjoRadioBtn3" for="ID_sstiRodoNissuIjoRadioBtn3"><input type="radio" id="ID_sstiRodoNissuIjoRadioBtn3" name="sstiRodoNissuIjoRadioBtn" value="3" disabled="">以内</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>休日</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に見込まれる休日を選択して、検索することができます。<br>「週休二日」を選択して、週休二日制度が適用される求人を検索できます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="flex input p_l_0_25_sd"><div id="ID_holidayCKBox" name="holidayCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LholidayCKBox1" for="ID_holidayCKBox1"><input type="checkbox" id="ID_holidayCKBox1" name="holidayCKBox" value="1">月曜日</label></div>
+<div class="checkbox"><label id="ID_LholidayCKBox2" for="ID_holidayCKBox2"><input type="checkbox" id="ID_holidayCKBox2" name="holidayCKBox" value="2">火曜日</label></div>
+<div class="checkbox"><label id="ID_LholidayCKBox3" for="ID_holidayCKBox3"><input type="checkbox" id="ID_holidayCKBox3" name="holidayCKBox" value="3">水曜日</label></div>
+<div class="checkbox"><label id="ID_LholidayCKBox4" for="ID_holidayCKBox4"><input type="checkbox" id="ID_holidayCKBox4" name="holidayCKBox" value="4">木曜日</label></div>
+<div class="checkbox"><label id="ID_LholidayCKBox5" for="ID_holidayCKBox5"><input type="checkbox" id="ID_holidayCKBox5" name="holidayCKBox" value="5">金曜日</label></div>
+<div class="checkbox"><label id="ID_LholidayCKBox6" for="ID_holidayCKBox6"><input type="checkbox" id="ID_holidayCKBox6" name="holidayCKBox" value="6">土曜日</label></div>
+<div class="checkbox"><label id="ID_LholidayCKBox7" for="ID_holidayCKBox7"><input type="checkbox" id="ID_holidayCKBox7" name="holidayCKBox" value="7">日曜日</label></div>
+<div class="checkbox"><label id="ID_LholidayCKBox8" for="ID_holidayCKBox8"><input type="checkbox" id="ID_holidayCKBox8" name="holidayCKBox" value="8">祝日</label></div>
+</div></div><hr>
+<div>
+				<span class="bg_label thin_gray_back mb05 label_clear">週休二日</span>
+				<div class="flex input radios p_l_0_25_sd"><div id="ID_shukFtskRadioBtn" name="shukFtskRadioBtn" class="flex input align_center mb03"><div class="radio"><label id="ID_LshukFtskRadioBtn0" for="ID_shukFtskRadioBtn0"><input type="radio" id="ID_shukFtskRadioBtn0" name="shukFtskRadioBtn" value="0" checked="">指定しない</label></div>
+<div class="radio"><label id="ID_LshukFtskRadioBtn1" for="ID_shukFtskRadioBtn1"><input type="radio" id="ID_shukFtskRadioBtn1" name="shukFtskRadioBtn" value="1">毎週</label></div>
+<div class="radio"><label id="ID_LshukFtskRadioBtn2" for="ID_shukFtskRadioBtn2"><input type="radio" id="ID_shukFtskRadioBtn2" name="shukFtskRadioBtn" value="2">その他</label></div>
+</div></div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>年間休日数</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に見込まれる年間休日数を入力して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px">※年間休日数を設定するためには求人区分【フルタイム】または【新卒・既卒求人】の選択が必要です。</div><div id="ID_msgNenkanKjsu" name="msgNenkanKjsu" class="flex input align_center mb03"><div class="m03"><div class="fb"><span class="restrict nolabel ">半角数字</span></div><div><input type="text" class="talign-right in_width_4em grandparent_m_b_0" id="ID_nenkanKjsu" name="nenkanKjsu" maxlength="3" value="" disabled=""><span>日以上</span></div></div>
+</div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>派遣・請負</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後の雇用形態（労働者派遣・請負）を選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="flex input checks p_l_0_25_sd"><div id="ID_hakenUkeoinCKBox" name="hakenUkeoinCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LhakenUkeoinCKBox1" for="ID_hakenUkeoinCKBox1"><input type="checkbox" id="ID_hakenUkeoinCKBox1" name="hakenUkeoinCKBox" value="1">派遣</label></div>
+<div class="checkbox"><label id="ID_LhakenUkeoinCKBox2" for="ID_hakenUkeoinCKBox2"><input type="checkbox" id="ID_hakenUkeoinCKBox2" name="hakenUkeoinCKBox" value="2">請負</label></div>
+<div class="checkbox"><label id="ID_LhakenUkeoinCKBox3" for="ID_hakenUkeoinCKBox3"><input type="checkbox" id="ID_hakenUkeoinCKBox3" name="hakenUkeoinCKBox" value="3">派遣・請負を含まない</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>加入保険等</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に加入することとなる保険等を選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="flex input checks p_l_0_25_sd"><div id="ID_kanyuHknCKBox" name="kanyuHknCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LkanyuHknCKBox1" for="ID_kanyuHknCKBox1"><input type="checkbox" id="ID_kanyuHknCKBox1" name="kanyuHknCKBox" value="1">雇用保険</label></div>
+<div class="checkbox"><label id="ID_LkanyuHknCKBox2" for="ID_kanyuHknCKBox2"><input type="checkbox" id="ID_kanyuHknCKBox2" name="kanyuHknCKBox" value="2">労災保険</label></div>
+<div class="checkbox"><label id="ID_LkanyuHknCKBox3" for="ID_kanyuHknCKBox3"><input type="checkbox" id="ID_kanyuHknCKBox3" name="kanyuHknCKBox" value="3">健康保険</label></div>
+<div class="checkbox"><label id="ID_LkanyuHknCKBox4" for="ID_kanyuHknCKBox4"><input type="checkbox" id="ID_kanyuHknCKBox4" name="kanyuHknCKBox" value="4">厚生年金</label></div>
+<div class="checkbox"><label id="ID_LkanyuHknCKBox5" for="ID_kanyuHknCKBox5"><input type="checkbox" id="ID_kanyuHknCKBox5" name="kanyuHknCKBox" value="5">公務災害補償</label></div>
+<div class="checkbox"><label id="ID_LkanyuHknCKBox6" for="ID_kanyuHknCKBox6"><input type="checkbox" id="ID_kanyuHknCKBox6" name="kanyuHknCKBox" value="6">財形</label></div>
+<div class="checkbox"><label id="ID_LkanyuHknCKBox7" for="ID_kanyuHknCKBox7"><input type="checkbox" id="ID_kanyuHknCKBox7" name="kanyuHknCKBox" value="7">企業年金</label></div>
+<div class="checkbox"><label id="ID_LkanyuHknCKBox8" for="ID_kanyuHknCKBox8"><input type="checkbox" id="ID_kanyuHknCKBox8" name="kanyuHknCKBox" value="8">退職金制度</label></div>
+<div class="checkbox"><label id="ID_LkanyuHknCKBox9" for="ID_kanyuHknCKBox9"><input type="checkbox" id="ID_kanyuHknCKBox9" name="kanyuHknCKBox" value="9">退職金共済</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>定年制</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に適用される定年制度を選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px">※上記の【求人区分】で「新卒・既卒求人」以外を選択した場合のみ、検索条件に設定できます。</div><div class="flex input p_l_0_25_sd"><div id="ID_tnseiRadioBtn" name="tnseiRadioBtn" class="flex input align_center mb03"><div class="radio"><label id="ID_LtnseiRadioBtn0" for="ID_tnseiRadioBtn0"><input type="radio" id="ID_tnseiRadioBtn0" name="tnseiRadioBtn" value="0" checked="">指定しない</label></div>
+<div class="radio"><label id="ID_LtnseiRadioBtn1" for="ID_tnseiRadioBtn1"><input type="radio" id="ID_tnseiRadioBtn1" name="tnseiRadioBtn" value="1">あり</label></div>
+<div>［</div>
+<div class="m03"><div><select id="ID_tnseiCmbBox" name="tnseiCmbBox">
+<option value="" selected=""></option>
+<option value="60">60</option>
+<option value="61">61</option>
+<option value="62">62</option>
+<option value="63">63</option>
+<option value="64">64</option>
+<option value="65">65</option>
+<option value="66">66</option>
+<option value="67">67</option>
+<option value="68">68</option>
+<option value="69">69</option>
+<option value="70">70</option>
+</select></div>
+</div>
+<div>歳以上</div><div>］</div>
+<div class="radio"><label id="ID_LtnseiRadioBtn2" for="ID_tnseiRadioBtn2"><input type="radio" id="ID_tnseiRadioBtn2" name="tnseiRadioBtn" value="2">なし</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>入居可能住宅</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に入居可能な社員寮等の種別（単身用・世帯用）を選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="flex input p_l_0_25_sd"><div id="ID_nyukyoKaCKBox" name="nyukyoKaCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LnyukyoKaCKBox1" for="ID_nyukyoKaCKBox1"><input type="checkbox" id="ID_nyukyoKaCKBox1" name="nyukyoKaCKBox" value="1">単身用あり</label></div>
+<div class="checkbox"><label id="ID_LnyukyoKaCKBox2" for="ID_nyukyoKaCKBox2"><input type="checkbox" id="ID_nyukyoKaCKBox2" name="nyukyoKaCKBox" value="2">世帯用あり</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>利用可能な託児施設</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に従業員が利用可能な託児所施設を選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px">※上記の【求人区分】で「新卒・既卒求人」以外を選択した場合のみ、検索条件に設定できます。</div><div class="flex input p_l_0_25_sd"><div id="ID_riyoKanoNaTjsAriCKBox" name="riyoKanoNaTjsAriCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LriyoKanoNaTjsAriCKBox1" for="ID_riyoKanoNaTjsAriCKBox1"><input type="checkbox" id="ID_riyoKanoNaTjsAriCKBox1" name="riyoKanoNaTjsAriCKBox" value="1">あり</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>従業員数</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に就業する事業所（企業）の従業員数を選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="r08ThAcWrapper"><div id="ID_jginSuRadioBtn" name="jginSuRadioBtn" class="flex input align_center mb03"><div class="m_v_0 m_r_0"><div class="fs0_875 color_vivid_red mt8px mb05">※上記の【求人区分】で「新卒・既卒求人」以外を選択した場合のみ、検索条件に設定できます。</div>
+					<span class="bg_label thin_gray_back mb05 label_clear">就業場所</span>
+					<div class="flex p_l_0_25_sd"><div class="mr1 mb05"><div class="radio"><label id="ID_LjginSuRadioBtn0" for="ID_jginSuRadioBtn0"><input type="radio" id="ID_jginSuRadioBtn0" name="jginSuRadioBtn" value="0" checked="">指定しない</label></div>
+</div><div class="mr1 mb05"><div class="radio"><label id="ID_LjginSuRadioBtn1" for="ID_jginSuRadioBtn1"><input type="radio" id="ID_jginSuRadioBtn1" name="jginSuRadioBtn" value="1">１０人以上</label></div>
+</div><div class="mr1 mb05"><div class="radio"><label id="ID_LjginSuRadioBtn2" for="ID_jginSuRadioBtn2"><input type="radio" id="ID_jginSuRadioBtn2" name="jginSuRadioBtn" value="2">１００人以上</label></div>
+</div><div class="mr1 mb05"><div class="radio"><label id="ID_LjginSuRadioBtn3" for="ID_jginSuRadioBtn3"><input type="radio" id="ID_jginSuRadioBtn3" name="jginSuRadioBtn" value="3">３００人以上</label></div>
+</div><div class="mr1 mb05"><div class="radio"><label id="ID_LjginSuRadioBtn4" for="ID_jginSuRadioBtn4"><input type="radio" id="ID_jginSuRadioBtn4" name="jginSuRadioBtn" value="4">１０００人以上</label></div>
+</div></div></div></div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>希望する産業</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">採用後に就業する企業の産業分類を３つまで選択して、検索することができます。<br>産業分類は、「産業分類コード一覧」からも確認ができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="mt8px"><a id="ID_kibosangyo" href="https://www.hellowork.mhlw.go.jp/info/industry_list01.html" target="_blank">産業分類コード一覧</a></div><div class="fs0_875 mt05 mb05">【産業分類】ボタンを押して、希望する産業を選択してください。
+			</div><div id="ID_msgKiboSuruSngBrui1" name="msgKiboSuruSngBrui1" class="flex input align_center mb03 flex align_center"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em" id="ID_kiboSuruSngBrui1In" name="kiboSuruSngBrui1In" maxlength="2" value=""></div></div>
+<div class="flex Button"><input type="button" class="button" id="ID_Btn" name="Btn" onclick="openCodeAssist(&#39;3&#39;,&#39;4&#39;,&#39;kiboSuruSngBrui1In&#39;,&#39;kiboSuruSng1&#39;,&#39;1&#39;,&#39;2&#39;,&#39;-1&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,true);" value="産業分類">
+</div><div class="m_r_0" name="kiboSuruSng1" id="ID_kiboSuruSng1">&nbsp;</div>
+</div><div id="ID_msgKiboSuruSngBrui2" name="msgKiboSuruSngBrui2" class="flex input align_center mb03 flex align_center"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em" id="ID_kiboSuruSngBrui2In" name="kiboSuruSngBrui2In" maxlength="2" value=""></div></div>
+<div class="flex Button"><input type="button" class="button" id="ID_Btn" name="Btn" onclick="openCodeAssist(&#39;3&#39;,&#39;4&#39;,&#39;kiboSuruSngBrui2In&#39;,&#39;kiboSuruSng2&#39;,&#39;1&#39;,&#39;2&#39;,&#39;-1&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,true);" value="産業分類">
+</div><div class="m_r_0" name="kiboSuruSng2" id="ID_kiboSuruSng2">&nbsp;</div>
+</div><div id="ID_msgKiboSuruSngBrui3" name="msgKiboSuruSngBrui3" class="flex input align_center mb03 flex align_center"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em" id="ID_kiboSuruSngBrui3In" name="kiboSuruSngBrui3In" maxlength="2" value=""></div></div>
+<div class="flex Button"><input type="button" class="button" id="ID_Btn" name="Btn" onclick="openCodeAssist(&#39;3&#39;,&#39;4&#39;,&#39;kiboSuruSngBrui3In&#39;,&#39;kiboSuruSng3&#39;,&#39;1&#39;,&#39;2&#39;,&#39;-1&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,true);" value="産業分類">
+</div><div class="m_r_0" name="kiboSuruSng3" id="ID_kiboSuruSng3">&nbsp;</div>
+</div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>その他</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">応募時や採用後の労働条件に係る項目を複数選択して、検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div class="fs0_875 color_vivid_red mt8px pb05">※上記の【求人区分】で「新卒・既卒求人」を選択した場合は、正社員登用あり、トライアル雇用併用求人、UIJターン歓迎求人は検索条件に設定できません。</div><div class="flex input checks p_l_0_25_sd"><div id="ID_sonotaCKBox" name="sonotaCKBox" class="flex input align_center mb03"><div class="checkbox"><label id="ID_LsonotaCKBox1" for="ID_sonotaCKBox1"><input type="checkbox" id="ID_sonotaCKBox1" name="sonotaCKBox" value="1">書類選考なし</label></div>
+<div class="checkbox"><label id="ID_LsonotaCKBox2" for="ID_sonotaCKBox2"><input type="checkbox" id="ID_sonotaCKBox2" name="sonotaCKBox" value="2">正社員登用あり</label></div>
+<div class="checkbox"><label id="ID_LsonotaCKBox3" for="ID_sonotaCKBox3"><input type="checkbox" id="ID_sonotaCKBox3" name="sonotaCKBox" value="3">マイカー通勤可</label></div>
+<div class="checkbox"><label id="ID_LsonotaCKBox4" for="ID_sonotaCKBox4"><input type="checkbox" id="ID_sonotaCKBox4" name="sonotaCKBox" value="4">転勤の可能性なし</label></div>
+<div class="checkbox"><label id="ID_LsonotaCKBox5" for="ID_sonotaCKBox5"><input type="checkbox" id="ID_sonotaCKBox5" name="sonotaCKBox" value="5">在宅勤務</label></div>
+<div class="checkbox"><label id="ID_LsonotaCKBox10" for="ID_sonotaCKBox10"><input type="checkbox" id="ID_sonotaCKBox10" name="sonotaCKBox" value="10">オンライン自主応募可</label></div>
+<div class="checkbox"><label id="ID_LsonotaCKBox6" for="ID_sonotaCKBox6"><input type="checkbox" id="ID_sonotaCKBox6" name="sonotaCKBox" value="6">駅近（最寄り駅から徒歩１０分以内）</label></div>
+<div class="checkbox"><label id="ID_LsonotaCKBox7" for="ID_sonotaCKBox7"><input type="checkbox" id="ID_sonotaCKBox7" name="sonotaCKBox" value="7">受動喫煙対策あり</label></div>
+<div class="checkbox"><label id="ID_LsonotaCKBox8" for="ID_sonotaCKBox8"><input type="checkbox" id="ID_sonotaCKBox8" name="sonotaCKBox" value="8">トライアル雇用併用求人</label></div>
+<div class="checkbox"><label id="ID_LsonotaCKBox9" for="ID_sonotaCKBox9"><input type="checkbox" id="ID_sonotaCKBox9" name="sonotaCKBox" value="9">UIJターン歓迎求人</label></div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th r08ThAccordion " scope="row" data-open="false"><div>
+		<span>特集求人</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">ハローワークに問合せ等が多い求人（特集求人）を選択して検索することができます。</div></div>
+		</span>
+	<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="iew"><div class="r08ThAcWrapper"><div id="ID_tokusyuAriLabel" class="mt8px mb05 fs0_875">
+				特集求人を以下のいずれか1つを指定して検索することができます。
+			</div><div id="ID_tokusyuNashiLabel" class="mt8px mb05 fs0_875" style="display: none;">
+				現在、特集求人はありません。
+			</div><div id="ID_tokusyuKyujinBox" name="tokusyuKyujinBox" class="flex input align_center mb03"><div id="ID_01" class="flex tokusyuKyujin_box kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9" style=""><div class="checkbox"><label id="ID_LdaiTokusyuBox1" for="ID_daiTokusyuBox1" class="buttonStyle boxShadow"><input type="checkbox" class="modalAction button_style tokusyuKNo01" id="ID_daiTokusyuBox1" name="daiTokusyuBox" value="20260101001">医療・看護・保健分野</label></div>
+</div><div class="modalTokusyuKyujinBox20260101001 modal_nodisp"><div class="modal top " tabindex="0">医療・看護・保健分野</div>
+<div class="modal middle modalTokusyuKyujinBoxMiddle01 kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9">
+<div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox101" for="ID_tokusyuBox101"><input type="checkbox" id="ID_tokusyuBox101" name="tokusyuBox" value="20260101002">看護師、准看護師</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox102" for="ID_tokusyuBox102"><input type="checkbox" id="ID_tokusyuBox102" name="tokusyuBox" value="20260101003">保健師、助産師</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox103" for="ID_tokusyuBox103"><input type="checkbox" id="ID_tokusyuBox103" name="tokusyuBox" value="20260101004">リハビリ（ＰＴ、ＯＴ、ＳＴ、ＣＯ）</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox104" for="ID_tokusyuBox104"><input type="checkbox" id="ID_tokusyuBox104" name="tokusyuBox" value="20260101005">歯科衛生士・歯科技工士</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox105" for="ID_tokusyuBox105"><input type="checkbox" id="ID_tokusyuBox105" name="tokusyuBox" value="20260101006">栄養士、管理栄養士</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox106" for="ID_tokusyuBox106"><input type="checkbox" id="ID_tokusyuBox106" name="tokusyuBox" value="20260101007">診療放射線、臨床工学、臨床検査</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox107" for="ID_tokusyuBox107"><input type="checkbox" id="ID_tokusyuBox107" name="tokusyuBox" value="20260101008">薬剤師</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox108" for="ID_tokusyuBox108"><input type="checkbox" id="ID_tokusyuBox108" name="tokusyuBox" value="20260101009">医師、歯科医師</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox109" for="ID_tokusyuBox109"><input type="checkbox" id="ID_tokusyuBox109" name="tokusyuBox" value="20260101010">あはき・柔整</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox110" for="ID_tokusyuBox110"><input type="checkbox" id="ID_tokusyuBox110" name="tokusyuBox" value="20260101011">資格不問（看護助手、歯科助手など）</label></div>
+</div></div>
+<div class="modal bottom flex jus_center modalB_bottom modalB_width">
+<input class="button main modal_close shadowed modalB_bottom_ok_pc" id="ID_saveBtn" onclick="saveTokusyuKyujinModal(&#39;01&#39;);" name="saveBtn" type="button" value="決定">
+<input class="button sub modalB_bottom_Clear_pc" id="ID_clearBtn" onclick="clearTokusyuKyujinModal(&#39;01&#39;);" name="clearBtn" type="button" value="クリア">
+<input class="button sub modal_close shadowed modalB_bottom_close_pc" id="ID_cancelBtn" onclick="closeTokusyuKyujinModal(&#39;01&#39;);" name="cancelBtn" type="button" value="閉じる">
+</div>
+</div><div id="ID_02" class="flex tokusyuKyujin_box kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9" style=""><div class="checkbox"><label id="ID_LdaiTokusyuBox2" for="ID_daiTokusyuBox2" class="buttonStyle boxShadow"><input type="checkbox" class="modalAction button_style tokusyuKNo02" id="ID_daiTokusyuBox2" name="daiTokusyuBox" value="20260101012">介護分野</label></div>
+</div><div class="modalTokusyuKyujinBox20260101012 modal_nodisp"><div class="modal top " tabindex="0">介護分野</div>
+<div class="modal middle modalTokusyuKyujinBoxMiddle02 kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9">
+<div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox201" for="ID_tokusyuBox201"><input type="checkbox" id="ID_tokusyuBox201" name="tokusyuBox" value="20260101013">介護福祉士・ケアマネジャー</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox202" for="ID_tokusyuBox202"><input type="checkbox" id="ID_tokusyuBox202" name="tokusyuBox" value="20260101014">介護スタッフ（入所型）</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox203" for="ID_tokusyuBox203"><input type="checkbox" id="ID_tokusyuBox203" name="tokusyuBox" value="20260101015">介護スタッフ（通所型）</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox204" for="ID_tokusyuBox204"><input type="checkbox" id="ID_tokusyuBox204" name="tokusyuBox" value="20260101016">介護スタッフ（訪問型）</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox205" for="ID_tokusyuBox205"><input type="checkbox" id="ID_tokusyuBox205" name="tokusyuBox" value="20260101017">資格不問・初心者歓迎</label></div>
+</div></div>
+<div class="modal bottom flex jus_center modalB_bottom modalB_width">
+<input class="button main modal_close shadowed modalB_bottom_ok_pc" id="ID_saveBtn" onclick="saveTokusyuKyujinModal(&#39;02&#39;);" name="saveBtn" type="button" value="決定">
+<input class="button sub modalB_bottom_Clear_pc" id="ID_clearBtn" onclick="clearTokusyuKyujinModal(&#39;02&#39;);" name="clearBtn" type="button" value="クリア">
+<input class="button sub modal_close shadowed modalB_bottom_close_pc" id="ID_cancelBtn" onclick="closeTokusyuKyujinModal(&#39;02&#39;);" name="cancelBtn" type="button" value="閉じる">
+</div>
+</div><div id="ID_03" class="flex tokusyuKyujin_box kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9" style=""><div class="checkbox"><label id="ID_LdaiTokusyuBox3" for="ID_daiTokusyuBox3" class="buttonStyle boxShadow"><input type="checkbox" class="modalAction button_style tokusyuKNo03" id="ID_daiTokusyuBox3" name="daiTokusyuBox" value="20260101018">福祉・保育・子ども分野</label></div>
+</div><div class="modalTokusyuKyujinBox20260101018 modal_nodisp"><div class="modal top " tabindex="0">福祉・保育・子ども分野</div>
+<div class="modal middle modalTokusyuKyujinBoxMiddle03 kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9">
+<div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox301" for="ID_tokusyuBox301"><input type="checkbox" id="ID_tokusyuBox301" name="tokusyuBox" value="20260101019">サービス管理責任者</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox302" for="ID_tokusyuBox302"><input type="checkbox" id="ID_tokusyuBox302" name="tokusyuBox" value="20260101020">保育士</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox303" for="ID_tokusyuBox303"><input type="checkbox" id="ID_tokusyuBox303" name="tokusyuBox" value="20260101021">幼稚園教諭</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox304" for="ID_tokusyuBox304"><input type="checkbox" id="ID_tokusyuBox304" name="tokusyuBox" value="20260101022">保育教諭</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox305" for="ID_tokusyuBox305"><input type="checkbox" id="ID_tokusyuBox305" name="tokusyuBox" value="20260101023">障害者支援スタッフ</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox306" for="ID_tokusyuBox306"><input type="checkbox" id="ID_tokusyuBox306" name="tokusyuBox" value="20260101024">児童福祉支援スタッフ</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox307" for="ID_tokusyuBox307"><input type="checkbox" id="ID_tokusyuBox307" name="tokusyuBox" value="20260101025">資格不問・初心者歓迎</label></div>
+</div></div>
+<div class="modal bottom flex jus_center modalB_bottom modalB_width">
+<input class="button main modal_close shadowed modalB_bottom_ok_pc" id="ID_saveBtn" onclick="saveTokusyuKyujinModal(&#39;03&#39;);" name="saveBtn" type="button" value="決定">
+<input class="button sub modalB_bottom_Clear_pc" id="ID_clearBtn" onclick="clearTokusyuKyujinModal(&#39;03&#39;);" name="clearBtn" type="button" value="クリア">
+<input class="button sub modal_close shadowed modalB_bottom_close_pc" id="ID_cancelBtn" onclick="closeTokusyuKyujinModal(&#39;03&#39;);" name="cancelBtn" type="button" value="閉じる">
+</div>
+</div><div id="ID_04" class="flex tokusyuKyujin_box kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9" style=""><div class="checkbox"><label id="ID_LdaiTokusyuBox4" for="ID_daiTokusyuBox4" class="buttonStyle boxShadow"><input type="checkbox" class="modalAction button_style tokusyuKNo04" id="ID_daiTokusyuBox4" name="daiTokusyuBox" value="20260101026">建設分野</label></div>
+</div><div class="modalTokusyuKyujinBox20260101026 modal_nodisp"><div class="modal top " tabindex="0">建設分野</div>
+<div class="modal middle modalTokusyuKyujinBoxMiddle04 kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9">
+<div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox401" for="ID_tokusyuBox401"><input type="checkbox" id="ID_tokusyuBox401" name="tokusyuBox" value="20260101027">建設</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox402" for="ID_tokusyuBox402"><input type="checkbox" id="ID_tokusyuBox402" name="tokusyuBox" value="20260101028">土木・採掘</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox403" for="ID_tokusyuBox403"><input type="checkbox" id="ID_tokusyuBox403" name="tokusyuBox" value="20260101029">電気・通信</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox404" for="ID_tokusyuBox404"><input type="checkbox" id="ID_tokusyuBox404" name="tokusyuBox" value="20260101030">設計・施工管理・測量</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox405" for="ID_tokusyuBox405"><input type="checkbox" id="ID_tokusyuBox405" name="tokusyuBox" value="20260101031">初心者歓迎</label></div>
+</div></div>
+<div class="modal bottom flex jus_center modalB_bottom modalB_width">
+<input class="button main modal_close shadowed modalB_bottom_ok_pc" id="ID_saveBtn" onclick="saveTokusyuKyujinModal(&#39;04&#39;);" name="saveBtn" type="button" value="決定">
+<input class="button sub modalB_bottom_Clear_pc" id="ID_clearBtn" onclick="clearTokusyuKyujinModal(&#39;04&#39;);" name="clearBtn" type="button" value="クリア">
+<input class="button sub modal_close shadowed modalB_bottom_close_pc" id="ID_cancelBtn" onclick="closeTokusyuKyujinModal(&#39;04&#39;);" name="cancelBtn" type="button" value="閉じる">
+</div>
+</div><div id="ID_05" class="flex tokusyuKyujin_box kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9" style=""><div class="checkbox"><label id="ID_LdaiTokusyuBox5" for="ID_daiTokusyuBox5" class="buttonStyle boxShadow"><input type="checkbox" class="modalAction button_style tokusyuKNo05" id="ID_daiTokusyuBox5" name="daiTokusyuBox" value="20260101032">警備分野</label></div>
+</div><div class="modalTokusyuKyujinBox20260101032 modal_nodisp"><div class="modal top " tabindex="0">警備分野</div>
+<div class="modal middle modalTokusyuKyujinBoxMiddle05 kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9">
+<div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox501" for="ID_tokusyuBox501"><input type="checkbox" id="ID_tokusyuBox501" name="tokusyuBox" value="20260101033">施設警備員</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox502" for="ID_tokusyuBox502"><input type="checkbox" id="ID_tokusyuBox502" name="tokusyuBox" value="20260101034">交通誘導員</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox503" for="ID_tokusyuBox503"><input type="checkbox" id="ID_tokusyuBox503" name="tokusyuBox" value="20260101035">その他警備員・保安員</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox504" for="ID_tokusyuBox504"><input type="checkbox" id="ID_tokusyuBox504" name="tokusyuBox" value="20260101036">初心者歓迎</label></div>
+</div></div>
+<div class="modal bottom flex jus_center modalB_bottom modalB_width">
+<input class="button main modal_close shadowed modalB_bottom_ok_pc" id="ID_saveBtn" onclick="saveTokusyuKyujinModal(&#39;05&#39;);" name="saveBtn" type="button" value="決定">
+<input class="button sub modalB_bottom_Clear_pc" id="ID_clearBtn" onclick="clearTokusyuKyujinModal(&#39;05&#39;);" name="clearBtn" type="button" value="クリア">
+<input class="button sub modal_close shadowed modalB_bottom_close_pc" id="ID_cancelBtn" onclick="closeTokusyuKyujinModal(&#39;05&#39;);" name="cancelBtn" type="button" value="閉じる">
+</div>
+</div><div id="ID_06" class="flex tokusyuKyujin_box kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9" style=""><div class="checkbox"><label id="ID_LdaiTokusyuBox6" for="ID_daiTokusyuBox6" class="buttonStyle boxShadow"><input type="checkbox" class="modalAction button_style tokusyuKNo06" id="ID_daiTokusyuBox6" name="daiTokusyuBox" value="20260101037">運輸分野</label></div>
+</div><div class="modalTokusyuKyujinBox20260101037 modal_nodisp"><div class="modal top " tabindex="0">運輸分野</div>
+<div class="modal middle modalTokusyuKyujinBoxMiddle06 kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9">
+<div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox601" for="ID_tokusyuBox601"><input type="checkbox" id="ID_tokusyuBox601" name="tokusyuBox" value="20260101038">配送・集荷</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox602" for="ID_tokusyuBox602"><input type="checkbox" id="ID_tokusyuBox602" name="tokusyuBox" value="20260101039">貨物自動車</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox603" for="ID_tokusyuBox603"><input type="checkbox" id="ID_tokusyuBox603" name="tokusyuBox" value="20260101040">バス</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox604" for="ID_tokusyuBox604"><input type="checkbox" id="ID_tokusyuBox604" name="tokusyuBox" value="20260101041">乗用車</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox605" for="ID_tokusyuBox605"><input type="checkbox" id="ID_tokusyuBox605" name="tokusyuBox" value="20260101042">機械（フォークリフト、クレーン等）</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox606" for="ID_tokusyuBox606"><input type="checkbox" id="ID_tokusyuBox606" name="tokusyuBox" value="20260101043">初心者歓迎</label></div>
+</div></div>
+<div class="modal bottom flex jus_center modalB_bottom modalB_width">
+<input class="button main modal_close shadowed modalB_bottom_ok_pc" id="ID_saveBtn" onclick="saveTokusyuKyujinModal(&#39;06&#39;);" name="saveBtn" type="button" value="決定">
+<input class="button sub modalB_bottom_Clear_pc" id="ID_clearBtn" onclick="clearTokusyuKyujinModal(&#39;06&#39;);" name="clearBtn" type="button" value="クリア">
+<input class="button sub modal_close shadowed modalB_bottom_close_pc" id="ID_cancelBtn" onclick="closeTokusyuKyujinModal(&#39;06&#39;);" name="cancelBtn" type="button" value="閉じる">
+</div>
+</div><div id="ID_07" class="flex tokusyuKyujin_box kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9" style=""><div class="checkbox"><label id="ID_LtokusyuBox7" for="ID_tokusyuBox7" class="buttonStyle boxShadowNone"><input type="checkbox" class="noneModalAction button_style tokusyuKNo07" id="ID_tokusyuBox7" name="tokusyuBox" value="20260424001">シニア求人</label></div>
+</div><div id="ID_08" class="flex tokusyuKyujin_box kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9" style=""><div class="checkbox"><label id="ID_LdaiTokusyuBox8" for="ID_daiTokusyuBox8" class="buttonStyle boxShadow"><input type="checkbox" class="modalAction button_style tokusyuKNo08" id="ID_daiTokusyuBox8" name="daiTokusyuBox" value="20260101046">仕事と子育て両立求人</label></div>
+</div><div class="modalTokusyuKyujinBox20260101046 modal_nodisp"><div class="modal top " tabindex="0">仕事と子育て両立求人</div>
+<div class="modal middle modalTokusyuKyujinBoxMiddle08 kbn1 kbn2 kbn3 kbn4 kbn5 kbn6 kbn7 kbn8 kbn9">
+<div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox801" for="ID_tokusyuBox801"><input type="checkbox" id="ID_tokusyuBox801" name="tokusyuBox" value="20260101047">仕事と子育て両立求人</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox802" for="ID_tokusyuBox802"><input type="checkbox" id="ID_tokusyuBox802" name="tokusyuBox" value="20260101048">仕事と子育て両立求人★正社員</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox803" for="ID_tokusyuBox803"><input type="checkbox" id="ID_tokusyuBox803" name="tokusyuBox" value="20260101049">仕事と子育て両立求人★フルタイム</label></div>
+</div><div class="p_v_0_5"><div class="checkbox"><label id="ID_LtokusyuBox804" for="ID_tokusyuBox804"><input type="checkbox" id="ID_tokusyuBox804" name="tokusyuBox" value="20260101050">仕事と子育て両立求人★パート</label></div>
+</div></div>
+<div class="modal bottom flex jus_center modalB_bottom modalB_width">
+<input class="button main modal_close shadowed modalB_bottom_ok_pc" id="ID_saveBtn" onclick="saveTokusyuKyujinModal(&#39;08&#39;);" name="saveBtn" type="button" value="決定">
+<input class="button sub modalB_bottom_Clear_pc" id="ID_clearBtn" onclick="clearTokusyuKyujinModal(&#39;08&#39;);" name="clearBtn" type="button" value="クリア">
+<input class="button sub modal_close shadowed modalB_bottom_close_pc" id="ID_cancelBtn" onclick="closeTokusyuKyujinModal(&#39;08&#39;);" name="cancelBtn" type="button" value="閉じる">
+</div>
+</div></div></div></td></tr>
+<tr>
+<th class="r08Th" scope="row"><div>
+		<span>PRロゴマーク</span>
+		<span class="flex_sd last_right_sd">
+			<span class="nes_label any">任意</span><div class="tooltip_wrap"><button type="button" class="tooltipBtn_layout tooltipJS" ontouchstart="" aria-expanded="false"><span class="tooltipImg"></span></button><div class="tooltipText" style="display: none;">企業（事業所）が国から認定を受けた制度等のロゴを選択して検索することができます。</div></div>
+		</span>
+	</div></th><td class="iew"><div id="ID_chkPRLogo" name="chkPRLogo" class="flex input align_center mb03"><div class="mt05 width100p_sd"><button class="button annotateBtn_base annotateBtn_layout annotateBtn_color prRogo_button pr_btn" id="ID_prLogoBtn" name="prLogoBtn" type="button" value="PRロゴマークを選択"><span class="annotateBtn_textFont annotateBtn_textColor">PRロゴマークを選択</span><span class="annotateBtn_imgLayout annotateBtn_absoluteRight"><img src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/add_line.svg" class="annotateBtn_img filter_gray_purasu"></span></button>
+<div class="disp_none prLogoArea mt05"><div class="bg_label thin_mypage_back mr1">選択中</div><div class="mr1" id="ID_prLogoLabel" name="prLogoLabel"></div><input class="button button sub" id="ID_clear" onclick="clearPRlogo()" name="clear" type="button" value="クリア">
+</div></div></div></td></tr>
+</tbody></table>
+<div id="ID_float_search_button_area" class="float_search_button_area flex width100p" style="position: absolute; top: auto; bottom: 36240.1px;"><button class="button main mb05 width100p shadowed flex align_center jus_center annotateBtn_color color2" id="ID_searchBtn" name="searchBtn" type="submit" value=" 検索する"><img src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/search_fill.svg" class="annotateBtn_img"> 検索する</button>
+<input class="button sub mb05 width100p " id="ID_searchClearBtn" name="searchClearBtn" type="button" value="条件をクリア">
+</div><div id="ID_float_search_button_area2" class="float_search_button_area flex jus_center float_nodisp" style="display: none;"><div class="check_pc" style=""><button class="button main m_h_0 in_width_15em mb05 shadowed" id="ID_checkedKyujinhyoIppanBtn" name="checkedKyujinhyoIppanBtn" type="submit" value="チェックした求人の&lt;br&gt;求人票を表示" formtarget="_blank" style="display: none;">チェックした求人の<br>求人票を表示</button>
+<button class="button main m_h_0 in_width_15em mb05 shadowed" id="ID_checkedKyujinhyoDsBtn" name="checkedKyujinhyoDsBtn" type="submit" value="チェックした求人の&lt;br&gt;求人票(大卒等)を表示" formtarget="_blank" style="display: none;">チェックした求人の<br>求人票(大卒等)を表示</button>
+<button class="button sub m_h_0 in_width_15em shadowed js-checkedKyujinViewBtn" id="ID_checkedKyujinViewBtn" name="checkedKyujinViewBtn" type="submit" value="チェックした&lt;br&gt;求人を表示">チェックした<br>求人を表示</button>
+</div><div class="check_mobile flex jus_end width100p" style="display: none;"><button class="button main mb05 width100p shadowed checkedKyujinhyoBtnIppan_1" id="ID_checkedKyujinhyoIppanBtn" name="checkedKyujinhyoIppanBtn" type="submit" value="チェックした求人の&lt;br&gt;

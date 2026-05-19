@@ -1,0 +1,8 @@
+﻿File: ハローワークインターネットサービス - 求人情報検索・一覧.html
+UTF8 IndexOf Hello: 198
+SJIS IndexOf Hello: -1
+UTF8 Sample: <!DOCTYPE html>
+<!-- saved from url=(0054)https://www.hellowork.mhlw.go.jp/kensaku/GECA110030.do -->
+SJIS Sample: <!DOCTYPE html>
+<!-- saved from url=(0054)https://www.hellowork.mhlw.go.jp/kensaku/GECA110030.do -->
+

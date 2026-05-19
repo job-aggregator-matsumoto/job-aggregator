@@ -1,0 +1,26 @@
+﻿<table id="ID_sub_table" class="normal mb1">
+<tbody><tr>
+<th class="dispnone_sd" scope="row">
+														<span>求職番号入力</span>
+													</th><td><div class="flex input"><div><a id="ID_kyujinLink" href="https://www.hellowork.mhlw.go.jp/member/mem_service02.html" target="_blank">
+																	事業所名等の公開について
+																</a><div class="fs0_875 m05 mt8px">
+																	ハローワーク受付票に記載されている求職番号を入力してください。
+																</div><div class="mt8px"><span class="restrict nolabel ">半角数字5桁-8桁以内</span>
+</div><div id="ID_msgKSNo" name="msgKSNo" class="flex input align_center mb03"><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_5em grandparent_m_v_0 m_b_0" id="ID_kSNoJo" name="kSNoJo" maxlength="5" value=""></div></div>
+<div class="ta_left hyphen">-</div><div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_8em grandparent_m_v_0 m_b_0" id="ID_kSNoGe" name="kSNoGe" maxlength="8" value=""></div></div>
+</div></div></div></td></tr>
+</tbody></table>
+</div></div></div></div></div><div class="width100p mb1"><table class="normal mb1">
+<tbody><tr>
+<th class="r08Th r08ThAccordion kensakusikata " scope="row" data-open="false"><div>
+										<span>求人情報検索のしかた（詳しい検索方法）</span>
+										<span></span>
+										<span class="accordion_icon"><img class="filter_main open_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_up_fill.svg"><img class="filter_main close_icon" src="./ハローワークインターネットサービス - 求人情報検索・一覧_files/arrow_down_fill.svg"></span></div></th><td class="kensakusikata"><div class="r08ThAcWrapper"><div class="fs08 m05 mt8px">
+													希望する条件を入力して【検索する】ボタンを押してください。
+													<br class="br_pc">
+													かんたんな条件で検索したい場合は、【
+													<a id="ID_searchKantaniLink" class="mb05" href="https://www.hellowork.mhlw.go.jp/kensaku/GECA110030.do#ID_kensaku_float_stop">
+														かんたん検索を利用する
+													</a>
+													】ボタンを

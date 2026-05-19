@@ -1,0 +1,32 @@
+﻿div>年間休日数：120日</div>
+</td></tr>
+<tr>
+<td class="label_col">
+							<span class="bg_label thin_gray_back">求人番号</span>
+						</td><td class="data_col"><div class="flex nowrap jus_sb"><div class="flex ">13010-48716861</div>
+
+								<button type="button" class="button shadowed main qr_btn fs0_5" data-id="13010-48716861">
+									二次元
+									<br>
+									バーコード
+									<i class="ds_assets dsa_code_reader_line color_white fs2_5"></i>
+								</button>
+							</div></td></tr>
+<tr>
+<td class="label_col">
+								<span class="bg_label thin_gray_back">公開範囲</span>
+							</td><td class="data_col"><div>１．事業所名等を含む求人情報を公開する</div>
+</td></tr>
+</tbody></table>
+</div></div></td></tr>
+<tr>
+<td><div class="flex kodawari">
+					<span class="bg_label white_back b2">学歴不問</span>
+				
+					<span class="bg_label white_back b2">資格不問</span>
+				
+					<span class="bg_label white_back b2">時間外労働なし</span>
+				
+					<span class="bg_label white_back b2">転勤なし</span>
+				
+					<span class="bg_label white_back b2">通勤手
