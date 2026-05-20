@@ -898,7 +898,6 @@ function editServiceNotice() {
             showToast('注意書きを更新しました。');
         }
     }
-    }
 }
 
 // 手動編集データをJSONファイルとしてエクスポートする関数
