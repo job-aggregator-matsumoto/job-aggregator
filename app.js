@@ -898,5 +898,73 @@ function editServiceNotice() {
             showToast('注意書きを更新しました。');
         }
     }
+    }
 }
 
+// 手動編集データをJSONファイルとしてエクスポートする関数
+function exportManualEdits() {
+    const savedJobs = localStorage.getItem('importedJobs');
+    if (!savedJobs || JSON.parse(savedJobs).length === 0) {
+        showToast('書き出すデータがありません。');
+        return;
+    }
+    
+    const blob = new Blob([savedJobs], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    a.download = `job_edits_${dateStr}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    showToast('修正データを書き出しました！');
+}
+
+// エクスポートされたJSONファイルをインポートする関数
+function importManualEdits(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const importedData = JSON.parse(e.target.result);
+            if (!Array.isArray(importedData)) {
+                throw new Error('無効なデータ形式です');
+            }
+            
+            // 既存のデータとマージする
+            let currentSaved = [];
+            const prevSaved = localStorage.getItem('importedJobs');
+            if (prevSaved) {
+                try { currentSaved = JSON.parse(prevSaved); } catch(err){}
+            }
+            
+            // IDの重複を排除して結合（インポートしたデータを優先）
+            const mergedJobs = [...importedData];
+            currentSaved.forEach(cj => {
+                if (!mergedJobs.some(mj => mj.id === cj.id)) {
+                    mergedJobs.push(cj);
+                }
+            });
+            
+            localStorage.setItem('importedJobs', JSON.stringify(mergedJobs));
+            localStorage.removeItem('sync_data_hidden');
+            
+            init(); // 再描画
+            showToast(`成功！ ${importedData.length} 件の修正データを取り込みました。`);
+            
+        } catch (error) {
+            console.error('インポートエラー:', error);
+            alert('ファイルの読み込みに失敗しました。正しいJSONファイルを選択してください。');
+        }
+        
+        // inputをリセット
+        event.target.value = '';
+    };
+    reader.readAsText(file);
+}

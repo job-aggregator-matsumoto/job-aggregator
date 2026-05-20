@@ -142,6 +142,13 @@
                 <button id="restore-data" class="btn-search" style="background-color: transparent; border: 1px solid var(--accent); color: var(--accent); display: none;" onclick="restoreImportedData()">
                     <i class="fas fa-undo"></i> 直前のデータを復元
                 </button>
+                <button class="btn-search" style="background-color: #28a745; color: white;" onclick="exportManualEdits()">
+                    <i class="fas fa-file-export"></i> データを書き出す
+                </button>
+                <button class="btn-search" style="background-color: #17a2b8; color: white;" onclick="document.getElementById('import-json').click()">
+                    <i class="fas fa-file-import"></i> データを取り込む
+                </button>
+                <input type="file" id="import-json" style="display: none;" accept=".json" onchange="importManualEdits(event)">
             </div>
         </section>
 
