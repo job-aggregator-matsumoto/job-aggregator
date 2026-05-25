@@ -1,4 +1,4 @@
-﻿const lastUpdated = '2026-05-19 14:21:44';
+﻿const lastUpdated = '2026-05-20 11:56:52';
 const initialJobsData = [
   {
     "id": "22020-11078461",
@@ -6,7 +6,7 @@ const initialJobsData = [
     "company": "（事業所の意向により公開していません）",
     "location": "静岡県浜松市中央区",
     "salary": "1,100円〜1,500円",
-    "workingHours": "",
+    "workingHours": "9時00分〜17時00分の時間の間の3時間程度",
     "holiday": "土日祝他 週休二日制毎週",
     "description": "【完全在宅／全国応募可／副業ＯＫ】施設向け電話営業。週２～４日×２～４時間で時給１１００円～１５００円、出社不要。未経験歓迎、書類選考のみ、家事育児と両立可能。研修は在宅で専用動画",
     "postedAt": "2026-05-19",

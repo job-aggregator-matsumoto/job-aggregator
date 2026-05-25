@@ -203,6 +203,85 @@ for (var i = 0; i < allJobs.length; i++) {
     if (allJobs[i].officialUrl) urlCount++;
 }
 
+// 文字列からJSONフィールドを直接抽出する関数（COMオブジェクトを回避・トップレベルに配置）
+function extractField(objStr, field) {
+    var pattern = '"' + field + '":"';
+    var idx = objStr.indexOf(pattern);
+    if (idx === -1) return "";
+    var start = idx + pattern.length;
+    var end = start;
+    while (end < objStr.length) {
+        if (objStr.charAt(end) === '"' && objStr.charAt(end - 1) !== '\\') break;
+        end++;
+    }
+    return objStr.substring(start, end);
+}
+
+// --- 手動修正データ（manual_edits.json）のマージ処理 ---
+var manualEditsFile = fso.BuildPath(fso.BuildPath(baseDir, "data"), "manual_edits.json");
+if (fso.FileExists(manualEditsFile)) {
+    var editsJson = readAs(manualEditsFile, "utf-8");
+    if (editsJson) {
+        try {
+        
+        var overridesMap = {};
+        var objStart = editsJson.indexOf('{');
+        var parseCount = 0;
+        while (objStart !== -1) {
+            var depth = 0, objEnd = objStart;
+            while (objEnd < editsJson.length) {
+                var ch = editsJson.charAt(objEnd);
+                if (ch === '{') depth++;
+                else if (ch === '}') { depth--; if (depth === 0) break; }
+                objEnd++;
+            }
+            var objStr = editsJson.substring(objStart, objEnd + 1);
+            var eid = extractField(objStr, "id");
+            if (eid) {
+                overridesMap[eid] = {
+                    title: extractField(objStr, "title"),
+                    company: extractField(objStr, "company"),
+                    location: extractField(objStr, "location"),
+                    salary: extractField(objStr, "salary"),
+                    workingHours: extractField(objStr, "workingHours"),
+                    holiday: extractField(objStr, "holiday"),
+                    description: extractField(objStr, "description"),
+                    postedAt: extractField(objStr, "postedAt"),
+                    type: extractField(objStr, "type"),
+                    category: extractField(objStr, "category")
+                };
+                parseCount++;
+            }
+            objStart = editsJson.indexOf('{', objEnd + 1);
+        }
+        WScript.Echo("  Parsed " + parseCount + " override entries.");
+        
+        // 抽出済みのallJobsに対して上書き
+        var applyCount = 0;
+        for (var k = 0; k < allJobs.length; k++) {
+            var override = overridesMap[allJobs[k].id];
+            if (override) {
+                if (override.title) allJobs[k].title = override.title;
+                if (override.company) allJobs[k].company = override.company;
+                if (override.location) allJobs[k].location = override.location;
+                if (override.salary) allJobs[k].salary = override.salary;
+                if (override.workingHours) allJobs[k].workingHours = override.workingHours;
+                if (override.holiday) allJobs[k].holiday = override.holiday;
+                if (override.description) allJobs[k].description = override.description;
+                if (override.postedAt) allJobs[k].postedAt = override.postedAt;
+                if (override.type) allJobs[k].type = override.type;
+                if (override.category) allJobs[k].category = override.category;
+                applyCount++;
+            }
+        }
+        WScript.Echo("  Applied " + applyCount + " manual edits from manual_edits.json.");
+        } catch(e) {
+            WScript.Echo("  Failed to merge manual_edits.json: " + e.message);
+        }
+    }
+}
+// ----------------------------------------------------
+
 var jsonStr = "[\n";
 for (var i = 0; i < allJobs.length; i++) {
     var j = allJobs[i];
