@@ -293,7 +293,7 @@ function openModal(job) {
                     <i class="fas fa-external-link-alt"></i> 応募・詳細を公式で見る
                    </button>
                    <p style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">
-                       ※公式の詳細ページへ直接ジャンプします
+                       ※公式の詳細ページへ直接ジャンプします<br>削除済みだった場合は下のボタンで一覧から削除できます。
                    </p>`
                 : `<button class="btn-search" onclick="copyAndGoToOfficial('${job.id}')" style="background-color: var(--primary); color: white; padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; font-size: 1rem; font-weight: bold; transition: all 0.3s ease;">
                     <i class="fas fa-copy"></i> 求人番号をコピーして公式で検索する
@@ -302,6 +302,11 @@ function openModal(job) {
                        ※ハローワークのシステム仕様上、直接のリンクが厳しく制限されています。<br>トップページの「求人番号検索」から番号を貼り付けてご確認ください。
                    </p>`
             }
+            <div style="margin-top: 16px;">
+                <button onclick="deleteJob('${job.id}')" style="background-color: transparent; color: var(--danger, #e74c3c); border: 1px solid var(--danger, #e74c3c); padding: 8px 18px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='var(--danger,#e74c3c)';this.style.color='white'" onmouseout="this.style.backgroundColor='transparent';this.style.color='var(--danger,#e74c3c)'">
+                    <i class="fas fa-trash-alt"></i> ハローワークで削除済み・一覧から削除する
+                </button>
+            </div>
         </div>
     `;
     
@@ -315,6 +320,8 @@ function copyAndGoToOfficial(jobId) {
 
     // インポートした本物のデータ（セキュリティパス付きのURLがある）場合は直接飛ぶ！
     if (job && job.officialUrl && job.officialUrl !== 'https://www.hellowork.mhlw.go.jp/') {
+        // ハローワークに飛ぶ前に、どの求人を確認しに行ったか記録する
+        sessionStorage.setItem('checking_job_id', jobId);
         window.open(job.officialUrl, '_blank');
         return;
     }
@@ -328,6 +335,37 @@ function copyAndGoToOfficial(jobId) {
         alert(`お手数ですが、求人番号「${jobId}」をメモして、ハローワークのサイトで検索してください。`);
         window.open('https://www.hellowork.mhlw.go.jp/', '_blank');
     });
+}
+
+// 求人を一覧から削除する関数
+function deleteJob(jobId) {
+    const job = allJobs.find(j => j.id === jobId);
+    if (!job) return;
+
+    const confirmed = confirm(`「${job.title}」\n(${job.company})\n\nをハローワークで削除済みとして、一覧から削除しますか？\n\n※この操作は取り消せません。`);
+    if (!confirmed) return;
+
+    // メモリ上から削除
+    allJobs = allJobs.filter(j => j.id !== jobId);
+
+    // LocalStorage のインポートデータからも削除
+    const savedJobs = localStorage.getItem('importedJobs');
+    if (savedJobs) {
+        try {
+            let importedJobs = JSON.parse(savedJobs);
+            importedJobs = importedJobs.filter(j => j.id !== jobId);
+            localStorage.setItem('importedJobs', JSON.stringify(importedJobs));
+        } catch (e) {
+            console.error('削除処理中にエラー', e);
+        }
+    }
+
+    // sessionStorageのフラグをクリア
+    sessionStorage.removeItem('checking_job_id');
+
+    closeModal();
+    filterJobs();
+    showToast(`求人を一覧から削除しました。`);
 }
 
 function closeModal() {
@@ -354,6 +392,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('keyword').addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             filterJobs();
+        }
+    });
+
+    // ハローワークのタブから戻ってきたとき、求人が削除済みか自動確認する
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+            const checkingJobId = sessionStorage.getItem('checking_job_id');
+            if (checkingJobId) {
+                sessionStorage.removeItem('checking_job_id');
+                const job = allJobs.find(j => j.id === checkingJobId);
+                if (job) {
+                    // 少し遅らせてからダイアログを出す（タブ切り替えの描画が完了してから）
+                    setTimeout(() => {
+                        const wasDeleted = confirm(`【ハローワーク確認】\n\n「${job.title}」(${job.company})\n\nこの求人はハローワークで「削除済み」または「見つからない」状態でしたか？\n\n→ はい：一覧から削除します\n→ いいえ：そのまま残します`);
+                        if (wasDeleted) {
+                            deleteJob(checkingJobId);
+                        }
+                    }, 500);
+                }
+            }
         }
     });
 
