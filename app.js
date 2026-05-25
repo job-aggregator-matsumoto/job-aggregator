@@ -102,7 +102,20 @@ function renderJobs(jobsToRender) {
         
         const categoryClass = job.category === '障害者枠' ? 'category-disability' : 'category-general';
         const remoteBadge = job.isRemote ? '<span class="remote-badge">在宅OK</span>' : '';
-        const newBadge = job.isImported ? '<span class="badge-real">リアル求人</span><span class="badge-new">NEW</span>' : '';
+        
+        // NEWバッジの判定（投稿日から14日以内）
+        let isRecent = false;
+        if (job.postedAt) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const [y, m, d] = job.postedAt.split('-').map(Number);
+            const postedDate = new Date(y, m - 1, d);
+            postedDate.setHours(0, 0, 0, 0);
+            const diffDays = Math.floor((today - postedDate) / (1000 * 60 * 60 * 24));
+            isRecent = diffDays <= 14;
+        }
+        
+        const newBadge = job.isImported ? `<span class="badge-real">リアル求人</span>${isRecent ? '<span class="badge-new">NEW</span>' : ''}` : '';
         const isFav = favorites.includes(job.id);
         const favIconClass = isFav ? 'fas' : 'far';
         const favActiveClass = isFav ? 'active' : '';
@@ -166,14 +179,18 @@ function filterJobs() {
             matchesKeyword = words.every(word => {
                 if (!word) return true;
                 
+                const titleStr = job.title || '';
+                const compStr = job.company || '';
+                const typeStr = job.type || '';
+                const descStr = job.description || '';
                 const salaryStr = job.salary || '規定による';
                 const hoursStr = job.workingHours || '規定による';
                 const holidayStr = job.holiday || '規定による';
                 
-                return job.title.toLowerCase().includes(word) || 
-                       job.company.toLowerCase().includes(word) ||
-                       job.type.toLowerCase().includes(word) ||
-                       job.description.toLowerCase().includes(word) ||
+                return titleStr.toLowerCase().includes(word) || 
+                       compStr.toLowerCase().includes(word) ||
+                       typeStr.toLowerCase().includes(word) ||
+                       descStr.toLowerCase().includes(word) ||
                        salaryStr.toLowerCase().includes(word) ||
                        hoursStr.toLowerCase().includes(word) ||
                        holidayStr.toLowerCase().includes(word);
