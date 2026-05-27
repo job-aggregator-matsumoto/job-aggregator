@@ -100,7 +100,9 @@ function renderJobs(jobsToRender) {
         card.className = 'job-card';
         card.style.animationDelay = `${index * 0.1}s`;
         
-        const categoryClass = job.category === '障害者枠' ? 'category-disability' : 'category-general';
+        let categoryClass = 'category-general';
+        if (job.category === '障害者枠') categoryClass = 'category-disability';
+        if (job.category === '会計年度任用職員') categoryClass = 'category-gov';
         const remoteBadge = job.isRemote ? '<span class="remote-badge">在宅OK</span>' : '';
         
         // NEWバッジの判定（投稿日から14日以内）
@@ -242,7 +244,9 @@ function openModal(job) {
     const modal = document.getElementById('job-modal');
     const body = document.getElementById('modal-body');
     
-    const categoryClass = job.category === '障害者枠' ? 'category-disability' : 'category-general';
+    let categoryClass = 'category-general';
+    if (job.category === '障害者枠') categoryClass = 'category-disability';
+    if (job.category === '会計年度任用職員') categoryClass = 'category-gov';
 
     body.innerHTML = `
         <div class="modal-header">
