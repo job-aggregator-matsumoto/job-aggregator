@@ -62,8 +62,9 @@ foreach ($file in $files) {
         $tUtf8 = [System.Text.Encoding]::UTF8.GetString($b)
         $tSjis = [System.Text.Encoding]::GetEncoding(932).GetString($b)
         
-        $t = $tSjis
-        if ($tUtf8.IndexOf($uHello) -ge 0) { $t = $tUtf8 }
+        # UTF-8を基本とし、不正バイト（U+FFFD）がある場合のみShift-JISにフォールバック
+        $t = $tUtf8
+        if ($tUtf8.IndexOf([char]0xFFFD) -ge 0) { $t = $tSjis }
 
         # Split by job table
         $chunks = $t -split '<table[^>]*class="[^"]*kyujin'
