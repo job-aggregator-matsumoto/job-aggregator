@@ -14,11 +14,16 @@ function readAs(path, charset) {
 
 function isCorrect(t) {
     if (!t) return false;
-    // Check for essential Japanese headers: Acceptance Date, Reception Date, Company Name, Job Number
-    return (t.indexOf("\u53d7\u4ed8\u5e74\u6708\u65e5") !== -1 || 
-            t.indexOf("\u53d7\u7406\u5e74\u6708\u65e5") !== -1 ||
-            t.indexOf("\u4e8b\u696d\u6240\u540d") !== -1 || 
-            t.indexOf("\u6c42\u4eba\u756a\u53f7") !== -1);
+    // UTF-8としてのデコードに失敗した場合は代替文字が含まれる
+    if (t.indexOf("\uFFFD") !== -1) return false;
+    // Shift_JIS指定があれば除外
+    if (t.indexOf("charset=Shift_JIS") !== -1 || t.indexOf("charset=shift_jis") !== -1) return false;
+    
+    // より汎用的なキーワードでチェック
+    return (t.indexOf("年月日") !== -1 || 
+            t.indexOf("事業所") !== -1 || 
+            t.indexOf("求人") !== -1 ||
+            t.indexOf("ハローワーク") !== -1);
 }
 
 function readSmart(path) {

@@ -429,12 +429,12 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.onload = function(event) {
         const arrayBuffer = event.target.result;
         
-        // まずはUTF-8でデコードして「受付年月日」を探す
+        // まずはUTF-8でデコード
         let decoder = new TextDecoder('utf-8');
         let text = decoder.decode(arrayBuffer);
         
-        // UTF-8で日本語が壊れているかチェック（または受付年月日が含まれているか）
-        if (!text.includes('受付年月日') && !text.includes('受理年月日') && !text.includes('求人番号')) {
+        // UTF-8として不正なバイト列が含まれている場合、代替文字（\uFFFD）になる
+        if (text.includes('\uFFFD') || text.includes('charset=Shift_JIS')) {
             // Shift_JIS (CP932) で再試行
             decoder = new TextDecoder('shift-jis');
             text = decoder.decode(arrayBuffer);
