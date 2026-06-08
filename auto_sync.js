@@ -1,6 +1,6 @@
 var fso = new ActiveXObject("Scripting.FileSystemObject");
 var shell = new ActiveXObject("WScript.Shell");
-var sourceDir = "C:\\Users\\user\\Google \u30c9\u30e9\u30a4\u30d6 \u30b9\u30c8\u30ea\u30fc\u30df\u30f3\u30b0\\\u5171\u6709\u30c9\u30e9\u30a4\u30d6\\\u6c42\u4eba\u60c5\u5831PDF";
+var sourceDir = "G:\\共有ドライブ\\求人情報PDF";
 var baseDir = fso.GetParentFolderName(WScript.ScriptFullName);
 var targetFile = fso.BuildPath(fso.BuildPath(baseDir, "data"), "jobs_data.js");
 

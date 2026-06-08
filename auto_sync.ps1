@@ -1,10 +1,9 @@
 # Job Sync Script (Robust PowerShell Version)
 try {
     $baseDir = $PSScriptRoot
-    $googleRoot = (Get-Item $baseDir).Parent.Parent.FullName
     $sharedName = [string][char]0x5171 + [char]0x6709 + [char]0x30c9 + [char]0x30e9 + [char]0x30a4 + [char]0x30d6
     $sourceName = [string][char]0x6c42 + [char]0x4eba + [char]0x60c5 + [char]0x5831 + "PDF"
-    $srcPath = "$googleRoot\$sharedName\$sourceName"
+    $srcPath = "G:\$sharedName\$sourceName"
 } catch {
     Write-Host "Failed to resolve path"
     exit
@@ -62,9 +61,8 @@ foreach ($file in $files) {
         $tUtf8 = [System.Text.Encoding]::UTF8.GetString($b)
         $tSjis = [System.Text.Encoding]::GetEncoding(932).GetString($b)
         
-        # UTF-8を基本とし、不正バイト（U+FFFD）がある場合のみShift-JISにフォールバック
-        $t = $tUtf8
-        if ($tUtf8.IndexOf([char]0xFFFD) -ge 0) { $t = $tSjis }
+        $t = $tSjis
+        if ($tUtf8.IndexOf($uHello) -ge 0) { $t = $tUtf8 }
 
         # Split by job table
         $chunks = $t -split '<table[^>]*class="[^"]*kyujin'
