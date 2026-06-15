@@ -1,119 +1,203 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiroshi Matsumoto | Creative Portfolio</title>
-    <meta name="description" content="次世代のデジタル体験を創造するクリエイティブスタジオ。洗練されたデザインと革新的なテクノロジーであなたのブランドを加速させます。">
+    <title>ハローワーク求人まとめ | 理想の仕事を見つける</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="ハローワークの最新求人情報を一括検索・閲覧できるまとめサイトです。モダンなインターフェースで快適な仕事探しをサポートします。">
 </head>
+
 <body>
-    <nav>
-        <div class="logo">
-            <h3 style="font-size: 1.5rem; letter-spacing: -1px;">HIROSHI<span class="text-gradient">.M</span></h3>
+    <header>
+        <div class="container">
+            <h1 class="logo">eight株式会社の求人検索サービス</h1>
+            <p class="subtitle">ハローワーク インターネットサービスの求人情報をスマートに閲覧</p>
+            <div id="sync-status" style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px;">
+                AI自動更新: <span id="last-updated-time">確認中...</span>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">CONTACT ME</a>
-    </nav>
+    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-blob"></div>
-            <div class="container" style="display: flex; align-items: center; justify-content: space-between; text-align: left; gap: 4rem;">
-                <div style="flex: 1;">
-                    <h1 class="reveal" style="font-size: 4rem;">Hello, I'm <br><span class="text-gradient">Hiroshi Matsumoto</span></h1>
-                    <p class="reveal" style="margin-left: 0;">Excelを駆使したデータ分析と、創造的な表現を融合させるスペシャリスト。確かなロジックと柔軟な感性で、日々の業務をアートへと変えていきます。</p>
-                    <div class="reveal">
-                        <a href="#about" class="btn btn-primary">私について</a>
-                        <a href="#contact" class="btn" style="color: white; border: 1px solid var(--glass-border); margin-left: 1rem;">お問い合わせ</a>
-                    </div>
+    <main class="container">
+        <!-- サービスのお知らせ注意書き（インライン編集可能） -->
+        <div id="service-notice-box" class="service-notice-box" onclick="editServiceNotice()" title="クリックして注意書きを編集">
+            <div class="service-notice-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="service-notice-content">
+                <p id="service-notice-text">※障害者雇用求人は、勤務地は近畿だけを載せています。また、在宅可能と、通勤の両方の求人を載せています。※一般求人の方では、全国にある在宅勤務可能な求人だけを載せています。通勤が必要な求人は一般求人では、載せていません。</p>
+            </div>
+            <div class="service-notice-edit-indicator">
+                <i class="fas fa-pen"></i> 修正
+            </div>
+        </div>
+
+        <section class="search-section">
+            <div class="search-bar">
+                <input type="text" id="keyword" placeholder="キーワード（職種、会社名など）">
+                <select id="location">
+                    <option value="">全ての勤務地</option>
+                    <option value="在宅">在宅・リモート</option>
+                    <optgroup label="北海道・東北">
+                        <option value="北海道">北海道</option>
+                        <option value="青森県">青森県</option>
+                        <option value="岩手県">岩手県</option>
+                        <option value="宮城県">宮城県</option>
+                        <option value="秋田県">秋田県</option>
+                        <option value="山形県">山形県</option>
+                        <option value="福島県">福島県</option>
+                    </optgroup>
+                    <optgroup label="関東">
+                        <option value="茨城県">茨城県</option>
+                        <option value="栃木県">栃木県</option>
+                        <option value="群馬県">群馬県</option>
+                        <option value="埼玉県">埼玉県</option>
+                        <option value="千葉県">千葉県</option>
+                        <option value="東京都">東京都</option>
+                        <option value="神奈川県">神奈川県</option>
+                    </optgroup>
+                    <optgroup label="甲信越・北陸">
+                        <option value="新潟県">新潟県</option>
+                        <option value="富山県">富山県</option>
+                        <option value="石川県">石川県</option>
+                        <option value="福井県">福井県</option>
+                        <option value="山梨県">山梨県</option>
+                        <option value="長野県">長野県</option>
+                    </optgroup>
+                    <optgroup label="東海">
+                        <option value="岐阜県">岐阜県</option>
+                        <option value="静岡県">静岡県</option>
+                        <option value="愛知県">愛知県</option>
+                        <option value="三重県">三重県</option>
+                    </optgroup>
+                    <optgroup label="近畿">
+                        <option value="滋賀県">滋賀県</option>
+                        <option value="京都府">京都府</option>
+                        <option value="大阪府">大阪府</option>
+                        <option value="兵庫県">兵庫県</option>
+                        <option value="奈良県">奈良県</option>
+                        <option value="和歌山県">和歌山県</option>
+                    </optgroup>
+                    <optgroup label="中国">
+                        <option value="鳥取県">鳥取県</option>
+                        <option value="島根県">島根県</option>
+                        <option value="岡山県">岡山県</option>
+                        <option value="広島県">広島県</option>
+                        <option value="山口県">山口県</option>
+                    </optgroup>
+                    <optgroup label="四国">
+                        <option value="徳島県">徳島県</option>
+                        <option value="香川県">香川県</option>
+                        <option value="愛媛県">愛媛県</option>
+                        <option value="高知県">高知県</option>
+                    </optgroup>
+                    <optgroup label="九州・沖縄">
+                        <option value="福岡県">福岡県</option>
+                        <option value="佐賀県">佐賀県</option>
+                        <option value="長崎県">長崎県</option>
+                        <option value="熊本県">熊本県</option>
+                        <option value="大分県">大分県</option>
+                        <option value="宮崎県">宮崎県</option>
+                        <option value="鹿児島県">鹿児島県</option>
+                        <option value="沖縄県">沖縄県</option>
+                    </optgroup>
+                </select>
+                <select id="category">
+                    <option value="">全ての雇用枠</option>
+                    <option value="一般">一般雇用</option>
+                    <option value="障害者枠">障害者枠</option>
+                    <option value="会計年度任用職員">会計年度任用職員</option>
+                </select>
+                <select id="period">
+                    <option value="all" selected>全ての期間</option>
+                    <option value="1">今日</option>
+                    <option value="3">3日以内</option>
+                    <option value="7">今週（1週間以内）</option>
+                </select>
+                <button class="btn-search" onclick="filterJobs()">
+                    <i class="fas fa-search"></i> 検索
+                </button>
+                <select id="sort-order" onchange="filterJobs()">
+                    <option value="date-desc">新着順</option>
+                    <option value="date-asc">古い順</option>
+                    <option value="salary-desc">給与が高い順</option>
+                </select>
+                <button id="favorite-filter" class="btn-search" style="background-color: transparent; border: 1px solid var(--border-color); color: var(--text-muted);" onclick="toggleFavoriteFilter()">
+                    <i class="far fa-star"></i> お気に入り
+                </button>
+                <button class="btn-search" style="background-color: var(--secondary);" onclick="syncFromGoogleDrive()">
+                    <i class="fab fa-google-drive"></i> Googleドライブ同期
+                </button>
+                <div style="margin-top: 10px; font-size: 0.75rem;">
+                    <a href="#" onclick="document.getElementById('import-html').click(); return false;" style="color: var(--text-muted); text-decoration: underline;">
+                        <i class="fas fa-file-upload"></i> 個別にファイルを読み込む
+                    </a>
                 </div>
-                <div class="reveal float-slow" style="flex: 1; position: relative;">
-                    <div style="width: 400px; height: 500px; border-radius: 40px; overflow: hidden; border: 1px solid var(--glass-border); position: relative; box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);">
-                        <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=1000&auto=format&fit=crop" alt="Profile" style="width: 100%; height: 100%; object-fit: cover; filter: hue-rotate(240deg) brightness(1.2);">
-                    </div>
-                    <div style="position: absolute; bottom: -20px; right: -20px; background: var(--glass-bg); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 20px;">
-                        <p style="font-weight: 800; font-size: 1.5rem;" class="text-gradient">10+</p>
-                        <p style="font-size: 0.7rem; color: var(--text-secondary);">Years Experience</p>
-                    </div>
-                </div>
+                <input type="file" id="import-html" style="display: none;" accept=".html">
+                <button class="btn-search" style="background-color: transparent; border: 1px solid var(--border-color); color: var(--text-muted);" onclick="clearImportedData()">
+                    <i class="fas fa-trash-alt"></i> クリア
+                </button>
+                <button id="restore-data" class="btn-search" style="background-color: transparent; border: 1px solid var(--accent); color: var(--accent); display: none;" onclick="restoreImportedData()">
+                    <i class="fas fa-undo"></i> 直前のデータを復元
+                </button>
+                <button class="btn-search" style="background-color: #28a745; color: white;" onclick="exportManualEdits()">
+                    <i class="fas fa-file-export"></i> データを書き出す
+                </button>
+                <button class="btn-search" style="background-color: #17a2b8; color: white;" onclick="document.getElementById('import-json').click()">
+                    <i class="fas fa-file-import"></i> データを取り込む
+                </button>
+                <input type="file" id="import-json" style="display: none;" accept=".json" onchange="importManualEdits(event)">
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <div class="container">
-                <div class="grid" style="grid-template-columns: 1fr 1.5fr; align-items: center;">
-                    <div class="reveal">
-                        <h2 style="font-size: 3rem; margin-bottom: 2rem;">My Passion & <br><span class="text-gradient">Mission</span></h2>
-                    </div>
-                    <div class="reveal">
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            私は幼い頃から、何かを創り出すことに深い喜びを感じてきました。現在は、最新のテクノロジーを活用しながら、人間の感性に寄り添うデザインを追求しています。
-                        </p>
-                        <p style="color: var(--text-secondary);">
-                            単に見栄えが良いだけでなく、ユーザーが直感的に「使いやすい」「心地よい」と感じるプロダクト開発をミッションとしています。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div id="result-count" class="result-count">
+            <!-- JavaScriptで動的に更新 -->
+        </div>
 
-        <!-- Skills Section -->
-        <section id="skills" style="background: rgba(255,255,255,0.02);">
-            <div class="container">
-                <div class="section-title reveal">
-                    <h2>Skills & Expertise</h2>
-                </div>
-                <div class="grid">
-                    <div class="card reveal">
-                        <div style="width: 50px; height: 50px; background: var(--grad-primary); border-radius: 12px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">📊</div>
-                        <h3>Excel Master</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">複雑なデータ集計、VLOOKUP/Pivotを用いた分析、業務効率化の自動化を得意としています。</p>
-                    </div>
-                    <div class="card reveal">
-                        <div style="width: 50px; height: 50px; background: var(--grad-primary); border-radius: 12px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">💻</div>
-                        <h3>Development</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">HTML, CSS, JS, React, Node.js</p>
-                    </div>
-                    <div class="card reveal">
-                        <div style="width: 50px; height: 50px; background: var(--grad-primary); border-radius: 12px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">🚀</div>
-                        <h3>Branding</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Identity, Typography, Strategy</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="container" style="max-width: 800px; text-align: center;">
-                <div class="section-title reveal">
-                    <h2>Start a Conversation</h2>
-                    <p style="color: var(--text-secondary);">新しいプロジェクトのご相談をお待ちしております。</p>
-                </div>
-                <form class="reveal" style="background: var(--glass-bg); padding: 3rem; border-radius: 32px; border: 1px solid var(--glass-border);">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-                        <input type="text" placeholder="お名前" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1rem; border-radius: 12px; color: white; outline: none;">
-                        <input type="email" placeholder="メールアドレス" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1rem; border-radius: 12px; color: white; outline: none;">
-                    </div>
-                    <textarea placeholder="メッセージ" rows="5" style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1rem; border-radius: 12px; color: white; outline: none; margin-bottom: 1.5rem;"></textarea>
-                    <button type="button" class="btn btn-primary" style="width: 100%;">送信する</button>
-                </form>
-            </div>
-        </section>
+        <div id="job-grid" class="job-grid">
+            <!-- JavaScriptで動的に生成 -->
+        </div>
     </main>
 
-    <footer style="padding: 4rem 2rem; border-top: 1px solid var(--glass-border); text-align: center;">
-        <p style="color: var(--text-secondary); font-size: 0.8rem;">&copy; 2026 PRM STUDIO. Built with Passion.</p>
+    <footer>
+        <div class="container"
+            style="text-align: center; padding: 40px 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.8rem;">
+            <p>&copy; 2026 HelloWork Hub. All rights reserved.</p>
+            <p>※本サイトは学習目的のデモサイトであり、実際のハローワーク公式サービスとは関係ありません。</p>
+        </div>
     </footer>
 
-    <script src="main.js"></script>
+    <!-- 詳細モーダル -->
+    <div id="job-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+                <!-- JavaScriptで動的に生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 警告・確認用モーダル -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content" style="max-width: 440px; text-align: center; padding: 40px 30px;">
+            <div style="font-size: 3.5rem; color: var(--danger); margin-bottom: 20px; filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.3));">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2 id="confirm-title" style="margin-bottom: 12px; font-size: 1.5rem;">警告</h2>
+            <p id="confirm-message" style="margin-bottom: 30px; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;"></p>
+            <div style="display: flex; gap: 12px; justify-content: center;">
+                <button id="confirm-cancel" class="btn-search" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: var(--text-main); flex: 1;">キャンセル</button>
+                <button id="confirm-ok" class="btn-search" style="background: var(--danger); color: white; border: none; flex: 1;">削除する</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="data/jobs_data.js" charset="utf-8"></script>
+    <script src="app.js?v=3" charset="utf-8"></script>
 </body>
+
 </html>
