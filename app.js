@@ -42,7 +42,14 @@ function init() {
             }
         });
 
-        allJobs = mergedJobs;
+        allJobs = mergedJobs.map(job => {
+            if (job.category !== '障害者枠' && 
+                ((job.type && job.type.includes('会計年度任用職員')) || 
+                 (job.title && job.title.includes('会計年度任用職員')))) {
+                job.category = '会計年度任用職員';
+            }
+            return job;
+        });
         
         // 更新日時を表示
         if (typeof lastUpdated !== 'undefined') {
